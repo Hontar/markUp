@@ -1,0 +1,25 @@
+{
+  "name": "markup",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hontar/markUp.git"
+  },
+  "author": "Vieronika Hontar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hontar/markUp/issues"
+  },
+  "homepage": "https://github.com/Hontar/markUp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

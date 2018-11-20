@@ -1,0 +1,329 @@
+$mainBackground: #f9f6d6;
+
+$mainDark: #f1e9b9;
+
+$textLight: #f1e9b9;
+
+$textBrown: #3c0a0d;
+
+$textDark: #2e2e2b;
+
+$textPlaceholder: #848181;
+
+$headerBackground: #0c0105;
+
+$headerFormOrange: #ffe092;
+
+$purple: #a986b4;
+
+$orange: #d8964d;
+
+$blue: #84bdd1;
+
+$burgundy: #5f1d1f;
+
+$btnBlue: #00a9da;
+
+$brnRed: #c11b35;
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) 
+  @return #{$pixels/$context}em;
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800,900');
+
+*
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+ul
+    list-style-type: none;
+
+a, li a
+    text-decoration: none;
+
+li
+    display: inline-block;	
+
+body	
+	min-width: 320px;
+	position: relative;
+	font-family: Raleway, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	background-color: $mainBackground;
+
+.wrap
+	max-width: 80%;
+	margin: 0 auto;
+	
+
+/* РАЗОБРАТЬСЯ С ЖИРНЫМ ШРИФТОМ*/
+
+h1, h2, h3, button
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+
+button
+	margin-top: 20px; 
+	font-size: em(28);
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: background-color 0.5s ease;	
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
+
+
+
+
+/* HEADER */
+
+header
+	background-color: $headerBackground;
+	height: 100vh;
+	overflow: hidden;
+
+header p, a, h1, h2
+	color: $textLight;
+
+.top_line
+	padding: 20px 0;
+	max-height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+.menu_btn
+	cursor: pointer;
+	.line
+		display: block;
+		height: 2px;
+		width: 25px;
+		margin-bottom: 5px;
+		transform-origin: 4px 0px;
+		background-color: #d5d0a5;
+		transition: transform 0.5s ease;
+
+.menu_btn.active
+	.line:nth-child(1)
+		transform: rotate(45deg) translate(0px, 0px)
+	.line:nth-child(2)
+		opacity: 0;
+	.line:nth-child(3)
+		transform: rotate(-45deg) translate(0px, -3px);
+
+.navMenu
+	display: none;
+	position: absolute;
+	top: 90px;
+	left: 0;
+	z-index: 15;	
+
+.navMenu.active
+	display: block;
+	ul	
+		width: calc(10vw + 200px);
+		height: 575px;
+		background-color: rgba(0,0,0,0.7);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 20px 0 20px 10vw;		
+		a
+			font-size: em(20);
+
+
+.menu, .address, .phone, .networks 
+	display: flex;
+	align-items: center;
+	&>img
+		padding-left: 20px;
+
+.networks 
+	justify-content: center;
+	width: 250px;
+	padding-right: 30px;
+	ul	
+		display: flex;
+		justify-content: center;		
+		li:not(:first-child)
+			margin-left: 30px;
+		img
+			display: flex;
+			justify-content: center;
+			align-items: center;		
+			height: 25px;
+
+	
+
+
+/* MAIN BANNER */
+
+.main_banner
+	position: relative;
+	background: url(../img/main_banner.png) center center/cover fixed;
+	height: calc(100% - 90px);
+	width: 100%;
+
+.booking
+	position: absolute;
+	width: 290px;
+	top: 0;
+	right: 10%;
+	padding: 30px;
+	text-align: center;
+	img
+		padding: 30px 0 40px;
+	h2
+		font-size: em(20);
+		text-transform: capitalize;
+	h1
+		font-size: em(24);
+		line-height: 1;
+		padding-bottom: 20px;
+
+/* РАЗОБРАТЬСЯ С ПЛАВНЫМ ПЕРЕВОХОД ПО ССЫЛКЕ*/
+
+.booking_form
+	position: relative;
+	background-color: rgba(255, 224, 146, 0.8);
+	padding: 30px 10px;
+	h3
+		font-size: em(22);
+		line-height: 1;
+		padding-bottom: 30px;
+	form 
+		input
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: white;
+			border: 1px solid white;
+			outline: none;
+			line-height: 1.1;
+			font-size: em(18);
+		input:focus
+			box-shadow: 0 0 10px rgba(89,31,35,1);;
+		button
+			color: white;
+			background-color: $blue;
+			padding: 10px 40px;
+		button:hover
+			background-color: $btnBlue;
+
+.scroll_down
+	position: absolute;		
+	width: 530px;
+	left: 50%;
+	bottom: 5%;	
+	transform: translateX(-50%);
+
+
+
+.scroll	
+	bottom: 0px;	
+	display: block;
+	content: "";
+	border: 1px solid $mainBackground;
+	z-index: 1;
+
+.scroll:before, .scroll:after
+	position: absolute;	
+	display: block;
+	content: "";	
+	left: 50%;
+	top: 50%;	
+	transform: translate(-50%, -50%) rotate(45deg);	
+
+.scroll:before	
+	width: 28px;
+	height: 28px;	
+	background-color: $mainBackground;
+
+.scroll:after	
+	width: 15px;
+	height: 15px;	
+	border-bottom: 1px solid #22221d;
+	border-right: 1px solid #22221d;
+
+
+
+
+/* WHY WE*/
+
+#advantage
+	height: 100vh;
+	h2
+		position: relative;
+		border: 3px solid #626262;
+		text-align: center;
+		font-weight: 500;
+		font-size: em(32);
+		color: #878678;
+		padding: 0 35px;
+		width: 270px;
+		span
+			font-size: em(20);
+			font-weight: 600;
+			color: $textDark;
+		&:before, &:after
+			content: "";
+			position: absolute;
+			border: 1px solid #626262;
+			width: 160px;			
+			top: 50%;
+		&:before
+			left: -50%;
+		&:after	
+			right: -50%;
+			
+
+
+/* FOOTER*/
+footer	
+	background-color: $burgundy;
+	padding: 5px 0;
+	min-height: 290px;
+	h3
+		font-size: em(24);
+		color: $textLight;
+		margin: 30px 0 50px;
+	p, a
+		font-size: em(20);
+		color: $textLight;
+
+.coworking, .follow, .contact
+	float: left;
+	width: 33%;
+
+.coworking
+	text-align: left;
+
+.follow
+	text-align: center;
+	> img 
+		margin-top: 50px;
+
+.f_networks ul
+	display: flex;
+	justify-content: center;
+	li:not(:first-child)
+		margin-left: 30px;
+	img
+		display: flex;
+		justify-content: center;
+		align-items: center;		
+		height: 25px;
+			
+
+.contact
+	text-align: right;
+
+	
+
+

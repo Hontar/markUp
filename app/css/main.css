@@ -35,7 +35,7 @@ h1, h2, h3, button {
 
 button {
   margin-top: 20px;
-  font-size: 1.75em;
+  font-size: 2.25em;
   border: none;
   outline: none;
   cursor: pointer;
@@ -224,7 +224,8 @@ header p, a, h1, h2 {
   .booking_form form button {
     color: white;
     background-color: #84bdd1;
-    padding: 10px 40px; }
+    padding: 10px 40px;
+    font-size: 1.75em; }
   .booking_form form button:hover {
     background-color: #00a9da; }
 
@@ -267,8 +268,15 @@ header p, a, h1, h2 {
 
 /* WHY WE*/
 #advantage {
-  height: 100vh; }
+  height: 100%;
+  background: -webkit-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
+  background: -o-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
+  background: linear-gradient(to right, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
+  padding-top: 25px;
+  margin-bottom: 25px; }
   #advantage h2 {
+    display: block;
+    margin: 0 auto;
     position: relative;
     border: 3px solid #626262;
     text-align: center;
@@ -291,6 +299,290 @@ header p, a, h1, h2 {
       left: -50%; }
     #advantage h2:after {
       right: -50%; }
+  #advantage .inner_grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: space-between;
+    -webkit-align-items: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 80px 0 30px;
+    height: 650px; }
+    #advantage .inner_grid blockquote {
+      width: 50%;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 100%; }
+      #advantage .inner_grid blockquote p {
+        position: relative;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        font-size: 3.375em;
+        font-weight: 500;
+        color: #3c0a0d;
+        line-height: 1; }
+        #advantage .inner_grid blockquote p:before {
+          content: "\2018 \2018";
+          height: 61px;
+          font-size: 3em;
+          position: absolute;
+          line-height: 61px; }
+        #advantage .inner_grid blockquote p:after {
+          content: "\2019 \2019";
+          height: 61px;
+          font-size: 3em;
+          position: absolute;
+          margin-top: 30px; }
+        #advantage .inner_grid blockquote p span {
+          display: inline-block;
+          width: 80px; }
+    #advantage .inner_grid .inner_wrapper {
+      width: 50%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      -webkit-box-align: space-between;
+      -webkit-align-items: space-between;
+          -ms-flex-align: space-between;
+              align-items: space-between;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-left: 40px; }
+    #advantage .inner_grid > div .picture {
+      display: inline-block;
+      width: 80px;
+      height: 150px;
+      text-align: right; }
+      #advantage .inner_grid > div .picture .who_pictogram {
+        height: 65px; }
+    #advantage .inner_grid > div .text {
+      display: inline-block;
+      width: 220px;
+      padding: 0 0 10px 20px;
+      position: relative;
+      font-size: 1.125em;
+      color: #2e2e2b;
+      line-height: 1.2;
+      font-weight: 500; }
+      #advantage .inner_grid > div .text:before {
+        content: '';
+        position: absolute;
+        border-left: 1px solid #6a6a6a;
+        height: 130px;
+        bottom: -10px;
+        left: 10px; }
+      #advantage .inner_grid > div .text:after {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #6a6a6a;
+        width: 150px;
+        bottom: 0;
+        left: 0; }
+
+/* OUR OFFICES */
+#our_offices {
+  height: 100%;
+  margin-bottom: 25px;
+  max-width: 1100px; }
+
+.seats_50 {
+  height: 450px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(221, 136, 42, 0.9))), url("../img/50_seats.png") top right no-repeat;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 30%, rgba(221, 136, 42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 30%, rgba(221, 136, 42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(221, 136, 42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat;
+  align-text: right; }
+
+.article {
+  width: 40%;
+  align-text: center; }
+
+/* DISCOUNTS */
+#discount {
+  height: 960px;
+  background: -webkit-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), -webkit-linear-gradient(right, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
+  background: -o-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), -o-linear-gradient(right, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
+  background: linear-gradient(to right, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), linear-gradient(-90deg, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
+  position: relative; }
+
+.frame {
+  border: 5px solid #d8964d;
+  height: 830px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+  overflow: visible; }
+
+.girl img {
+  position: absolute;
+  bottom: 0;
+  left: -130px;
+  z-index: 10; }
+
+.discount_form {
+  position: absolute;
+  width: 460px;
+  top: 50%;
+  right: -10%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 30px;
+  text-align: center;
+  z-index: 5;
+  background-color: rgba(202, 124, 40, 0.8);
+  -webkit-border-radius: 10px;
+          border-radius: 10px; }
+  .discount_form h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    text-align: center; }
+  .discount_form p {
+    font-size: 1.875em;
+    text-transform: lowercase;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff; }
+  .discount_form form {
+    margin: 10px 0; }
+    .discount_form form input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid white;
+      outline: none;
+      line-height: 1.1;
+      font-size: 1.5em; }
+    .discount_form form input:focus {
+      -webkit-box-shadow: 0 0 10px #591f23;
+              box-shadow: 0 0 10px #591f23; }
+    .discount_form form button {
+      color: white;
+      background-color: #84bdd1;
+      padding: 10px 90px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .discount_form form button:hover {
+      background-color: #00a9da; }
+
+/* GIFT */
+#gift {
+  height: 960px;
+  background: -webkit-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), -webkit-linear-gradient(right, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat right bottom, url(../img/join_background_black.png) no-repeat right bottom;
+  background: -o-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), -o-linear-gradient(right, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat right bottom, url(../img/join_background_black.png) no-repeat right bottom;
+  background: linear-gradient(to right, #f9f6d6 10px, rgba(0, 0, 0, 0) 15%), linear-gradient(-90deg, #f9f6d6 15px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat right bottom, url(../img/join_background_black.png) no-repeat right bottom;
+  position: relative; }
+  #gift img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10; }
+
+.free_month_form {
+  position: absolute;
+  width: 420px;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  text-align: center;
+  z-index: 5;
+  background-color: rgba(150, 192, 210, 0.85);
+  -webkit-border-radius: 10px;
+          border-radius: 10px; }
+  .free_month_form h2 {
+    font-size: 2.875em;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    text-align: center; }
+  .free_month_form p {
+    font-size: 1.875em;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    margin: 20px 0 25px; }
+    .free_month_form p span {
+      text-decoration: underline; }
+  .free_month_form form {
+    margin: 10px 0; }
+    .free_month_form form input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid white;
+      outline: none;
+      line-height: 1.1;
+      font-size: 1.5em; }
+    .free_month_form form input:focus {
+      -webkit-box-shadow: 0 0 10px #591f23;
+              box-shadow: 0 0 10px #591f23; }
+    .free_month_form form button {
+      color: white;
+      background-color: #c11b35;
+      padding: 10px 40px;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .free_month_form form button:hover {
+      background-color: #c11b35; }
+
+.join_team {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  padding: 25px 0;
+  background-color: rgba(150, 192, 210, 0.85);
+  text-align: center;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  z-index: 15; }
+  .join_team p {
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    font-weight: 800; }
+  .join_team p:first-child {
+    font-size: 2.25em; }
+  .join_team p:last-child {
+    font-size: 3em; }
 
 /* FOOTER*/
 footer {
@@ -301,7 +593,7 @@ footer {
     font-size: 1.5em;
     color: #f1e9b9;
     margin: 30px 0 50px; }
-  footer p, footer a {
+  footer p {
     font-size: 1.25em;
     color: #f1e9b9; }
 

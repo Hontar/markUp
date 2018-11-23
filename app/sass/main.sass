@@ -24,7 +24,7 @@ $burgundy: #5f1d1f;
 
 $btnBlue: #00a9da;
 
-$brnRed: #c11b35;
+$btnRed: #c11b35;
 
 $browser-context: 16; // Default
 
@@ -71,7 +71,7 @@ h1, h2, h3, button
 
 button
 	margin-top: 20px; 
-	font-size: em(28);
+	font-size: em(36);
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -213,6 +213,7 @@ header p, a, h1, h2
 			color: white;
 			background-color: $blue;
 			padding: 10px 40px;
+			font-size: em(28);
 		button:hover
 			background-color: $btnBlue;
 
@@ -222,8 +223,6 @@ header p, a, h1, h2
 	left: 50%;
 	bottom: 5%;	
 	transform: translateX(-50%);
-
-
 
 .scroll	
 	bottom: 0px;	
@@ -253,12 +252,16 @@ header p, a, h1, h2
 
 
 
-
 /* WHY WE*/
 
 #advantage
-	height: 100vh;
+	height: 100%;
+	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat
+	padding-top: 25px;
+	margin-bottom: 25px;
 	h2
+		display: block;
+		margin: 0 auto;
 		position: relative;
 		border: 3px solid #626262;
 		text-align: center;
@@ -267,6 +270,7 @@ header p, a, h1, h2
 		color: #878678;
 		padding: 0 35px;
 		width: 270px;
+		
 		span
 			font-size: em(20);
 			font-weight: 600;
@@ -281,7 +285,251 @@ header p, a, h1, h2
 			left: -50%;
 		&:after	
 			right: -50%;
+	.inner_grid
+		display: flex;
+		flex-flow: column wrap;
+		align-items: space-between;
+		justify-content: space-between;
+		padding: 80px 0 30px;;
+		height: 650px;
+		
+		blockquote					
+			width: 50%;
+			align-self: center;
+			justify-content: center;
+			height: 100%;
+			// padding: 0 40px;			
+			p
+				position: relative;	
+				top: 40%;
+				transform: translateY(-50%);
+				font-size: em(54);
+				font-weight: 500;
+				color: $textBrown;	
+				line-height: 1;			
+				&:before
+					content: "\2018 \2018";
+					height: 61px;
+					font-size: em(48);
+					position: absolute;
+					// margin-top: -25px;
+					// margin-left: 65px;
+					line-height: 61px;
+				&:after
+					content: "\2019 \2019";
+					height: 61px;
+					font-size: em(48);
+					position: absolute;
+					margin-top: 30px;
+					// line-height: 61px;
+				span
+					display: inline-block;
+					width: 80px;
+		
+		.inner_wrapper
+			width: 50%;
+			height: 100%;
+			display: flex;
+			flex-flow: column wrap;
+			align-items: space-between;
+			justify-content: space-between;	
+			padding-left: 40px;
+		&>div
+			.picture				
+				display: inline-block;				
+				width: 80px;
+				height: 150px;
+				text-align: right;
+				.who_pictogram
+					height: 65px;
 			
+			.text
+				display: inline-block;
+				width: 220px;
+				padding: 0 0 10px 20px;
+				position: relative;
+				font-size: em(18);
+				color: $textDark;
+				line-height: 1.2;
+				font-weight: 500;
+				&:before
+					content: '';
+					position: absolute;
+					border-left: 1px solid #6a6a6a;
+					height: 130px;
+					bottom: -10px;
+					left: 10px;
+				&:after
+					content: '';
+					position: absolute;
+					border-bottom: 1px solid #6a6a6a;
+					width: 150px;
+					bottom: 0;
+					left: 0;
+
+/* OUR OFFICES */
+
+#our_offices
+	height: 100%;
+	margin-bottom: 25px;
+	max-width: 1100px;
+
+.seats_50
+	height: 450px;
+	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba(221,136,42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
+	align-text: right;
+.article
+	width: 40%;
+	align-text: center;
+
+		
+			
+/* DISCOUNTS */
+
+#discount
+	height: 960px;
+	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)15%), linear-gradient(-90deg, rgba(249,246,214, 1)15px, rgba(0,0,0, 0)15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
+	position: relative;
+
+.frame
+	border: 5px solid $orange;
+	height: 830px;
+	max-width: 900px;
+	margin: 0 auto;
+	position: relative;
+	top: 40px;
+	overflow: visible;
+
+.girl img
+	position: absolute;
+	bottom: 0;
+	left: -130px;
+	z-index: 10;
+
+.discount_form
+	position: absolute;
+	width: 460px;
+	top: 50%;
+	right: -10%;
+	transform: translateY(-50%);
+	padding: 30px;
+	text-align: center;
+	z-index: 5;
+	background-color: rgba(202, 124, 40, 0.8);	
+	border-radius: 10px;
+	h2
+		font-size: em(40);
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1;
+		text-align: center;
+	p			
+		font-size: em(30);
+		text-transform: lowercase;
+		font-weight: 400;		
+		line-height: 1;
+		color: #fff;	
+	form 
+		margin: 10px 0;
+		input
+			width: 100%;
+			margin: 10px 0;
+			padding: 10px;
+			background-color: white;
+			border: 1px solid white;
+			outline: none;
+			line-height: 1.1;
+			font-size: em(24);
+		input:focus
+			box-shadow: 0 0 10px rgba(89,31,35,1);;
+		button
+			color: white;
+			background-color: $blue;
+			padding: 10px 90px;
+			transition: all 0.5s ease;
+		button:hover
+			background-color: $btnBlue;
+
+
+/* GIFT */
+
+#gift
+	height: 960px;
+	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)15%), linear-gradient(-90deg, rgba(249,246,214, 1)15px, rgba(0,0,0, 0)15%), url(../img/join_background_workplace.png) no-repeat right bottom, url(../img/join_background_black.png) no-repeat right bottom;
+	position: relative;
+	img
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 10;
+
+.free_month_form
+	position: absolute;
+	width: 420px;
+	top: 0;
+	left: 0;	
+	padding: 40px;
+	text-align: center;
+	z-index: 5;
+	background-color: rgba(150, 192, 210, 0.85);	
+	border-radius: 10px;
+	h2
+		font-size: em(46);
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1;
+		text-align: center;
+	p			
+		font-size: em(30);
+		font-weight: 400;		
+		line-height: 1;
+		color: #fff;
+		margin: 20px 0 25px;
+		span
+			text-decoration: underline;	
+	form 
+		margin: 10px 0;
+		input
+			width: 100%;
+			margin: 10px 0;
+			padding: 10px;
+			background-color: white;
+			border: 1px solid white;
+			outline: none;
+			line-height: 1.1;
+			font-size: em(24);
+		input:focus
+			box-shadow: 0 0 10px rgba(89,31,35,1);;
+		button
+			color: white;
+			background-color: $btnRed;
+			padding: 10px 40px;
+			transition: all 0.5s ease;
+		button:hover
+			background-color: $btnRed;
+.join_team
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	padding: 25px 0;
+	background-color: rgba(150, 192, 210, 0.85);
+	text-align: center;
+	border-radius: 10px;
+	z-index: 15;
+	p
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1;
+		text-align: center;
+		font-weight: 800;
+	p:first-child
+		font-size: em(36);		
+	p:last-child
+		font-size: em(48);
+		
+		
 
 
 /* FOOTER*/
@@ -293,7 +541,7 @@ footer
 		font-size: em(24);
 		color: $textLight;
 		margin: 30px 0 50px;
-	p, a
+	p
 		font-size: em(20);
 		color: $textLight;
 

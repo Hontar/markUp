@@ -32,7 +32,6 @@ $browser-context: 16; // Default
   @return #{$pixels/$context}em;
 
 
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800,900');
 
 *
@@ -371,18 +370,81 @@ header p, a, h1, h2
 
 #our_offices
 	height: 100%;
-	margin-bottom: 25px;
+	// margin-bottom: 25px;
 	max-width: 1100px;
 
 .seats_50
 	height: 450px;
 	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba(221,136,42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
-	align-text: right;
+	text-align: right;
+	padding: 20px;
 .article
 	width: 40%;
-	align-text: center;
-
+	text-align: center;
+	h3
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		border: 3px solid $mainBackground;
+		text-align: center;
+		font-weight: 800;
+		font-size: em(36);
+		color: #fff;
+		// padding: 11px 0;
+		width: 365px;
 		
+		span
+			font-size: em(20);
+			font-weight: 600;
+			color: $textDark;
+		&:before, &:after
+			content: "";
+			position: absolute;
+			border: 1px solid $mainBackground;
+			width: 55px;			
+			top: 50%;
+		&:before
+			left: -13%;
+		&:after	
+			right: -13%;
+	button		
+		background-color: #edd3b6;
+		padding: 10px 75px;
+		transition: all 0.5s ease;
+		&>a
+			color: $textBrown;
+			// font-weight: 800;
+	button:hover
+		background-color: $btnBlue;
+
+.text_seats
+	margin: 25px 0;
+	text-align: justify;
+	&>p, &>a
+		font-size: em(24);
+		line-height: 1.2;
+		color: #fff;
+	a
+		text-transform: lowercase;
+		position: relative;
+		right: 0;
+
+		.icon-arrow-right2:before 
+			content: "\ea3c";
+			position: absolute;
+			font-size: 18px;
+			line-height: 30px;
+
+.seats_20
+	height: 450px;
+	background: linear-gradient(to left, rgba(0,0,0, 0) 30%, rgba(100,38,40, 0.9) 60%), url("../img/20_seats.png") top right no-repeat
+	text-align: right;
+	padding: 20px;		
+.seats_6
+	height: 450px;
+	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba(132,189,209, 0.9) 60%), url("../img/6_seats.png") top right no-repeat
+	text-align: right;
+	padding: 20px;
 			
 /* DISCOUNTS */
 

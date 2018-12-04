@@ -14,13 +14,13 @@ $headerBackground: #0c0105;
 
 $headerFormOrange: #ffe092;
 
-$purple: #a986b4;
+$purple: rgb(175, 139, 189);
 
-$orange: #d8964d;
+$orange: rgb(221, 136, 42);
 
-$blue: #84bdd1;
+$blue: rgb(132, 189, 209);
 
-$burgundy: #5f1d1f;
+$burgundy: rgb(95, 29, 31);
 
 $btnBlue: #00a9da;
 
@@ -57,7 +57,7 @@ body
 	background-color: $mainBackground;
 
 .wrap
-	max-width: 80%;
+	max-width: 70%;
 	margin: 0 auto;
 	
 
@@ -173,7 +173,7 @@ header p, a, h1, h2
 	position: absolute;
 	width: 290px;
 	top: 0;
-	right: 10%;
+	right: 15%;
 	padding: 30px;
 	text-align: center;
 	img
@@ -255,7 +255,8 @@ header p, a, h1, h2
 
 #advantage
 	height: 100%;
-	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat
+	background: linear-gradient(to right, rgba($mainBackground, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat
+	// background: url("../img/advantage.png") top left no-repeat
 	padding-top: 25px;
 	margin-bottom: 25px;
 	h2
@@ -291,7 +292,8 @@ header p, a, h1, h2
 		justify-content: space-between;
 		padding: 80px 0 30px;;
 		height: 650px;
-		
+		width: 90%;
+		margin: 0 auto;		
 		blockquote					
 			width: 50%;
 			align-self: center;
@@ -365,6 +367,8 @@ header p, a, h1, h2
 					width: 150px;
 					bottom: 0;
 					left: 0;
+			.right
+				width: 150px;
 
 /* OUR OFFICES */
 
@@ -375,9 +379,12 @@ header p, a, h1, h2
 
 .seats_50
 	height: 450px;
-	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba(221,136,42, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
+	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($orange, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
 	text-align: right;
 	padding: 20px;
+	display: flex;
+	justify-content: flex-end;
+
 .article
 	width: 40%;
 	text-align: center;
@@ -392,11 +399,6 @@ header p, a, h1, h2
 		color: #fff;
 		// padding: 11px 0;
 		width: 365px;
-		
-		span
-			font-size: em(20);
-			font-weight: 600;
-			color: $textDark;
 		&:before, &:after
 			content: "";
 			position: absolute;
@@ -437,29 +439,32 @@ header p, a, h1, h2
 
 .seats_20
 	height: 450px;
-	background: linear-gradient(to left, rgba(0,0,0, 0) 30%, rgba(100,38,40, 0.9) 60%), url("../img/20_seats.png") top right no-repeat
+	background: linear-gradient(to left, rgba(0,0,0, 0) 30%, rgba($burgundy, 0.9) 60%), url("../img/20_seats.png") top right no-repeat
 	text-align: right;
 	padding: 20px;		
 .seats_6
 	height: 450px;
-	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba(132,189,209, 0.9) 60%), url("../img/6_seats.png") top right no-repeat
+	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($blue, 0.9) 60%), url("../img/6_seats.png") top right no-repeat
 	text-align: right;
 	padding: 20px;
+	display: flex;
+	justify-content: flex-end;
 			
 /* DISCOUNTS */
 
 #discount
 	height: 960px;
-	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)15%), linear-gradient(-90deg, rgba(249,246,214, 1)15px, rgba(0,0,0, 0)15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
+	background: linear-gradient(to right, rgba($mainBackground, 1)10px, rgba(0,0,0, 0)15%), linear-gradient(-90deg, rgba($mainBackground, 1)15px, rgba(0,0,0, 0)15%), url(../img/discount_office_color.png) no-repeat left center, url(../img/discount_office_background.png) no-repeat left center;
 	position: relative;
+	padding-top: 40px;
+	.frame
+		height: 830px;
+		max-width: 900px;		
 
 .frame
 	border: 5px solid $orange;
-	height: 830px;
-	max-width: 900px;
 	margin: 0 auto;
 	position: relative;
-	top: 40px;
 	overflow: visible;
 
 .girl img
@@ -512,24 +517,205 @@ header p, a, h1, h2
 		button:hover
 			background-color: $btnBlue;
 
+#statistics
+	height: 350px;	
+	background: url(../img/long_banner.png) no-repeat center center;
+	padding: 40px 0;
+	border-top: 2px solid $textBrown;
+	border-bottom: 2px solid $textBrown;
+
+.statistic_wrapper, .statistic_section
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	// height: 100%;
+.statistic_wrapper
+	height: 100%;
+	width: 100%;
+	max-width: 1124px;
+	margin: 0 auto;
+
+.statistic_section
+	height: 100%;
+	width: 50%;
+
+.space, .computers, .offices, .customers 
+	height: 100%;
+	width: 50%;
+	p:first-child
+		width: 180px;
+		height: 100px;
+		margin: 40px auto 0;
+		font-size: em(68);
+		color: $textLight;
+		font-weight: 800;
+		text-align: center;
+		line-height: 1;
+	h3
+		// display: block;
+		margin: 30px auto 0;
+		position: relative;
+		border: 5px solid $mainBackground;
+		text-align: center;
+		font-weight: 800;
+		font-size: em(24);
+		color: $mainBackground;
+		text-transform: lowercase;
+		width: 180px;
+		&:before, &:after
+			content: "";
+			position: absolute;
+			border: 1px solid $mainBackground;
+			width: 55px;			
+			top: 50%;
+		&:before
+			left: -25%;
+		&:after	
+			right: -25%;
+.area 
+	position: relative;
+	p:first-child
+		background-color: rgba($orange, 0.8);
+.area p:last-child
+	position: absolute;
+	bottom: 0;
+	right: 65px;
+	text-align: end;
+	font-size: em(28);
+	font-weight: 600;
+	color: $textLight;
+	width: auto;
+	height: auto;
+
+.space
+	background: linear-gradient(to top, rgba($orange, 1),50%, rgba(0,0,0, 0));
+	p:first-child
+		background-color: rgba($orange, 0.8);
+
+.offices
+	background: linear-gradient(to top, rgba($burgundy, 1),50%, rgba(0,0,0, 0));
+	p:first-child
+		background-color: rgba($burgundy, 0.8);
+
+.computers
+	background: linear-gradient(to top, rgba($blue, 1),50%, rgba(0,0,0, 0));
+	p:first-child
+		background-color: rgba($blue, 0.8);
+
+.customers
+	background: linear-gradient(to top, rgba($purple, 1),50%, rgba(0,0,0, 0));
+	p:first-child
+		background-color: rgba($purple, 0.8);
+	
+
+
+/* DETAILS */
+
+#details
+	height: 100vh;
+	background: linear-gradient(to top, rgba($mainBackground, 1)15px, rgba(0,0,0, 0)20%), url(../img/details_chair.png) no-repeat center top, url(../img/details_background.png) no-repeat center top;
+	position: relative;
+	padding-top: 40px;
+	.frame
+		height: 90%;
+		width: 80%;
+
+.details_items
+		display: flex;
+		flex-flow: column wrap;
+		align-items: space-between;
+		justify-content: space-between;
+		padding: 80px 0 30px;;
+		height: 100%;
+		width: 90%;
+		margin: 0 auto;		
+		blockquote					
+			width: 70%;
+			align-self: center;
+			justify-content: center;
+			height: 100%;
+			// padding: 0 40px;			
+			p
+				position: relative;	
+				top: 10%;
+				transform: translateY(-50%);
+				font-size: em(42);
+				font-weight: 600;
+				color: rgba(109, 37, 4, 0.9);	
+				line-height: 1;			
+				&:before
+					content: "\2018 \2018";
+					height: 42px;
+					font-size: em(24);
+					position: absolute;
+					margin-top: -25px;
+					// margin-left: 65px;
+					line-height: 61px;
+				&:after
+					content: "\2019 \2019";
+					height: 40px;
+					font-size: em(24);
+					position: absolute;
+					margin-top: 42px;
+					// line-height: 61px;
+				span
+					display: inline-block;
+					width: 20px;
+		
+		&>div
+			.picture				
+				display: inline-block;				
+				width: 80px;
+				height: 130px;
+				text-align: right;
+				.who_pictogram
+					height: 65px;
+			
+			.text
+				display: inline-block;
+				width: 220px;
+				padding: 0 0 10px 20px;
+				position: relative;
+				font-size: em(18);
+				color: $textDark;
+				line-height: 1.2;
+				font-weight: 500;
+				&:before
+					content: '';
+					position: absolute;
+					border-left: 1px solid #6a6a6a;
+					height: 130px;
+					bottom: -10px;
+					left: 10px;
+				&:after
+					content: '';
+					position: absolute;
+					border-bottom: 1px solid #6a6a6a;
+					width: 150px;
+					bottom: 0;
+					left: 0;
+			.right
+				width: 150px;
+
 
 /* GIFT */
 
 #gift
-	height: 960px;
-	background: linear-gradient(to right, rgba(249,246,214, 1)10px, rgba(0,0,0, 0)15%), linear-gradient(-90deg, rgba(249,246,214, 1)15px, rgba(0,0,0, 0)15%), url(../img/join_background_workplace.png) no-repeat right bottom, url(../img/join_background_black.png) no-repeat right bottom;
+	height: 100vh;
+	background: linear-gradient(to right, rgba($mainBackground, 1)25px, rgba(0,0,0, 0)15%), linear-gradient(to left, rgba($mainBackground, 1)25px, rgba(0,0,0, 0)15%), url(../img/join_background_workplace.png) no-repeat center bottom, url(../img/join_background_black.png) no-repeat center bottom;
 	position: relative;
 	img
 		position: absolute;
 		bottom: 0;
-		right: 0;
+		right: 11%;
 		z-index: 10;
 
 .free_month_form
 	position: absolute;
 	width: 420px;
 	top: 0;
-	left: 0;	
+	left: 10%;	
 	padding: 40px;
 	text-align: center;
 	z-index: 5;
@@ -574,7 +760,7 @@ header p, a, h1, h2
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 100%;
+	width: 80%;
 	padding: 25px 0;
 	background-color: rgba(150, 192, 210, 0.85);
 	text-align: center;
@@ -591,7 +777,108 @@ header p, a, h1, h2
 	p:last-child
 		font-size: em(48);
 		
-		
+
+/* LOCATION */	
+
+#location
+	height: 100vh;
+	background: linear-gradient(to right, rgba($mainBackground, 1)35px, rgba(0,0,0, 0)15%), linear-gradient(to left, rgba($mainBackground, 1)35px, rgba(0,0,0, 0)15%), url(../img/location.png) no-repeat center 200px;
+	position: relative;
+	padding-top: 60px;
+	margin-bottom: 60px;
+	.frame
+		height: 90%;
+		width: 80%;
+		h2
+			font-size: em(36);
+			font-weight: 600;
+			color: $textBrown;
+			margin: 60px auto 40px auto;
+			text-align: center;
+			line-height: 1;
+		p
+			font-size: em(18);
+			color: $textPlaceholder;
+			text-align: center;
+			width: 43%;
+			margin: 0 auto;
+			line-height: 1.1;
+		h3
+			font-size: em(18);
+			font-weight: 600;
+			color: $textPlaceholder;
+			text-align: center;
+			text-transform: capitalize;
+			padding: 3px 0;
+			width: 145px;
+			line-height: 1.1;
+			border: 3px solid $orange;
+			background: rgba(255, 255, 255, 0.8);
+			position: relative;
+			&:after
+				content: '';
+				color: $orange;
+				position: absolute;
+				border: 5px solid $orange;
+				border-radius: 50%;
+				height: 10px;
+				width: 10px;
+				box-sizing: border-box;
+				top: 133px;
+				left: 50%;
+				transform: translateX(-50%);
+			&:before
+				content: '';
+				color: $orange;
+				position: absolute;
+				border: 15px solid rgba(255, 255, 255, 0.8);
+				border-radius: 50%;
+				height: 15px;
+				width: 15px;
+				box-sizing: border-box;
+				top: 108px;
+				left: 50%;
+				transform: translate(-50%, 50%);
+				// bottom: -10px;
+				// left: 10px;
+.park, .market, .MC, .coffee_life, .open_1969
+	position: absolute;
+	display: inline-block;
+	&:after
+		content: '';
+		position: absolute;
+		border-left: 2px solid $orange;
+		height: 111px;
+		// bottom: -108px;
+		left: 50%;
+		transform: translateX(-50%);
+	
+.park	
+	height: 142px;
+	top: 268px;
+	left: 5%;
+
+.market
+	height: 68px;
+	top: 286px;
+	left: 33%;
+
+.MC
+	height: 118px;
+	top: 276px;
+	left: 55%;
+
+.coffee_life
+	height: 199px;
+	top: 70%;
+	left: 55%;
+
+.open_1969
+	height: 227px;
+	top: 255px;
+	left: 80%;
+			
+
 
 
 /* FOOTER*/

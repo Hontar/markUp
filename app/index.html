@@ -51,7 +51,7 @@
                             <a href = "#gift">Gift</a>
                         </li> 
                         <li>
-                            <a href = "#contacts">Contacts</a>
+                            <a href = "#location">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -133,8 +133,8 @@
         </div>
     </header>
     <main>        
-        <section id = "advantage">
-            <div class="wrap">
+        <section id = "advantage" class="wrap">
+            <!-- <div class="wrap"> -->
                 <h2>
                     why <span>we</span>
                 </h2>            
@@ -147,7 +147,7 @@
                     </blockquote>
                     <div class="inner_wrapper">
                         <div class = "equipment">
-                            <div class = "picture left">
+                            <div class = "picture">
                                 <img class="who_pictogram" src = "img/icon_computer.png" alt = "modern equipment">
                             </div>
                             <div class="text left">
@@ -158,7 +158,7 @@
                             </div>                        
                         </div>
                         <div class = "meeting">
-                            <div class = "picture left">
+                            <div class = "picture">
                                 <img class="who_pictogram" src = "img/icon_meeting.png" alt = "meeting rooms">
                             </div>
                             <div class="text left">    
@@ -170,10 +170,10 @@
                             </div>
                         </div>
                         <div class = "access">
-                            <div class = "picture right">
+                            <div class = "picture">
                                 <img class="who_pictogram" src = "img/icon_watches.png" alt = "round-the-clock acess">
                             </div>
-                            <div class="text right">
+                            <div class="text left">
                                 <p>
                                     Access to the 
                                     office 24/7
@@ -181,17 +181,17 @@
                             </div>
                         </div>
                         <div class = "events">
-                            <div class = "picture left">
+                            <div class = "picture">
                                 <img class="who_pictogram"  src = "img/icon_hands.png" alt = "public events">
                             </div>
-                            <div class="text left">
+                            <div class="text right">
                                 <p>
                                     Various public events
                                 </p>
                             </div>
                         </div>                        
                         <div class = "discounts">
-                            <div class = "picture right">
+                            <div class = "picture">
                                 <img class="who_pictogram" src = "img/icon_discounts.png" alt = "discounts">
                             </div>
                             <div class="text right">
@@ -203,7 +203,7 @@
                             </div>
                         </div>                        
                         <div class = "cleaning">
-                            <div class = "picture right">
+                            <div class = "picture">
                                 <img class="who_pictogram" src = "img/icon_cleaning.png" alt = "daily cleaning">
                             </div>
                             <div class="text right">
@@ -215,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+            <!-- </div>             -->
         </section>
         <section id = "our_offices" class = "wrap">
             <div class = "seats_50">
@@ -320,22 +320,22 @@
                             space
                         </h3>
                     </div>
+                    <div class = "offices">                        
+                            <p>
+                                15
+                            </p>                        
+                            <h3>
+                                offices
+                            </h3>
+                        </div>                    
+                </div>
+                <div class = "statistic_section">
                     <div class = "computers">                      
                         <p>
                             670
                         </p>                        
                         <h3>
                             computers
-                        </h3>
-                    </div>
-                </div>
-                <div class = "statistic_section">
-                    <div class = "offices">                        
-                        <p>
-                            15
-                        </p>                        
-                        <h3>
-                            offices
                         </h3>
                     </div>
                     <div class = "customers">                        
@@ -414,34 +414,54 @@
         </section>
         <section id = "details" class = "wrap">
             <div class = "frame">
-               <div class = "details_items">
-                <blockquote>
-                    It's all in the details
-                </blockquote>
-                <div class = "location">
-                    <img src = "img/icon_metro.png" alt = "great locaion">
-                    <p>
-                        Great location, 5 minutes to subway
-                    </p>
-               </div> 
-               <div class = "coffeebreak">
-                    <img src = "img/icon_cup.png" alt = "free coffeebreak">
-                    <p>
-                        Free tea, coffee and sweets
-                    </p>
-               </div> 
-               <div class = "people">
-                    <img src = "img/icon_people.png" alt = "good company">
-                    <p>
-                        Always good company
-                    </p>
-               </div> 
-               <div class = "library">
-                    <img src = "img/icon_book.png" alt = "own library">
-                    <p>
-                        Our own little library
-                    </p>
-               </div> 
+                <div class = "details_items">
+                    <blockquote>
+                        <p>
+                            <span></span>
+                            It's all in the details
+                        </p>                    
+                    </blockquote>
+                    <div class = "location">
+                        <div class="picture">
+                            <img src = "img/icon_metro.png" alt = "great locaion">
+                        </div>
+                        <div class="text">
+                        <p>
+                            Great location, 5 minutes to subway
+                        </p> 
+                        </div>
+                        
+                </div> 
+                <div class = "coffeebreak">
+                    <div class="picture">
+                            <img src = "img/icon_cup.png" alt = "free coffeebreak">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Free tea, coffee and sweets
+                            </p>
+                        </div>                        
+                </div> 
+                <div class = "library">
+                    <div class="picture">
+                        <img src = "img/icon_book.png" alt = "own library">
+                    </div>
+                    <div class="text">
+                        <p>
+                            Our own little library
+                        </p>
+                    </div>                        
+                </div> 
+                <div class = "people">
+                        <div class="picture">
+                            <img src = "img/icon_people.png" alt = "good company">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Always good company
+                            </p>
+                        </div>                        
+                </div>               
             </div>
         </section>
         <section id = "gift" class = "wrap">            
@@ -482,29 +502,29 @@
                 </p>
                 <!-- TO DO!!! -->
                 <div class = "park">
-                    <p>
+                    <h3>
                         Park
-                    </p>
+                    </h3>
                 </div>
                 <div class = "market">
-                    <p>
+                    <h3>
                         Market
-                    </p>
+                    </h3>
                 </div>
                 <div class = "MC">
-                    <p>
+                    <h3>
                         MC Donald's
-                    </p>
+                    </h3>
                 </div>
                 <div class = "coffee_life">
-                    <p>
+                    <h3>
                         Coffee life
-                    </p>
+                    </h3>
                 </div>
-                <div class = "1969_open">
-                    <p>
+                <div class = "open_1969">
+                    <h3>
                         1969 OPEN
-                    </p>
+                    </h3>
                 </div>
             </div>
         </section>
@@ -521,9 +541,11 @@
                     <p>
                         Kharkiv, 3, Sumska st.
                     </p>
-                    <a href = "mailto:info@open1969.com">
-                        info@open1969.com
-                    </a>
+                    <p>
+                        <a href = "mailto:info@open1969.com">
+                            info@open1969.com
+                        </a>
+                    </p>                    
                 </div>
             </div>
             <div class = "follow">

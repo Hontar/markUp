@@ -377,16 +377,22 @@ header p, a, h1, h2
 	// margin-bottom: 25px;
 	max-width: 1100px;
 
-.seats_50
+.seats_50, .seats_20, .seats_6
 	height: 450px;
-	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($orange, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
 	text-align: right;
-	padding: 20px;
+	padding: 30px;
+
+.seats_50, .seats_6
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-end;	
+
+.seats_50
+	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($orange, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
+	button:hover
+		background-color: rgba($burgundy, 0.9);
 
 .article
-	width: 40%;
+	width: 45%;
 	text-align: center;
 	h3
 		display: block;
@@ -416,8 +422,9 @@ header p, a, h1, h2
 		&>a
 			color: $textBrown;
 			// font-weight: 800;
-	button:hover
-		background-color: $btnBlue;
+	button:hover>a
+		color: $mainBackground;
+
 
 .text_seats
 	margin: 25px 0;
@@ -438,17 +445,14 @@ header p, a, h1, h2
 			line-height: 30px;
 
 .seats_20
-	height: 450px;
 	background: linear-gradient(to left, rgba(0,0,0, 0) 30%, rgba($burgundy, 0.9) 60%), url("../img/20_seats.png") top right no-repeat
-	text-align: right;
-	padding: 20px;		
+	button:hover
+		background-color: rgba($orange, 0.9);
+
 .seats_6
-	height: 450px;
 	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($blue, 0.9) 60%), url("../img/6_seats.png") top right no-repeat
-	text-align: right;
-	padding: 20px;
-	display: flex;
-	justify-content: flex-end;
+	button:hover
+		background-color: rgba($btnRed, 0.9);
 			
 /* DISCOUNTS */
 
@@ -516,6 +520,9 @@ header p, a, h1, h2
 			transition: all 0.5s ease;
 		button:hover
 			background-color: $btnBlue;
+
+
+/* STATISTICS */
 
 #statistics
 	height: 350px;	
@@ -609,6 +616,103 @@ header p, a, h1, h2
 		background-color: rgba($purple, 0.8);
 	
 
+/* REVIEWS */
+
+.slider_full_size
+	margin: 0 auto;
+	overflow: hidden;
+.slider_not_active
+	display: none;
+.slider_active
+	// float: left;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	// text-align: center;
+	width: 100%;
+	transition: margin 0.8s ease-out;
+	margin-left: 0px;	
+	.down
+		margin-bottom: 6px;
+	.up, .down
+		display: inline-block;
+		max-width: 358px;
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+	.up:not(:first-child), .down
+		margin-left: -173px;
+	.opinion, 
+		font-size: em(24);
+		line-height: 1.2;
+		color: rgb(252, 251, 249);
+		text-align: center;
+		width: 270px;
+		margin: 30px auto 10px;
+	.opinion_href
+		font-size: em(16);
+		// line-height: 1.2;
+		color: rgb(252, 251, 249);
+		// text-align: center;
+
+	.opinion_author
+		font-size: em(24);
+		font-weight: 800;
+		line-height: 0.3;
+		color: $textBrown;
+		width: 265px;
+		height: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 15px;
+		background-color: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		&:before, &:after
+			content: '';
+			position: absolute;
+			border: 1px solid rgba($mainBackground, 0.8);
+			width: 25px;		
+			top: 50%;
+		&:before
+			left: -20px;
+		&:after		
+			right: -20px;
+		h4
+			width: 140px;
+			text-align: center;
+			line-height: 40px;
+		p
+			position: absolute;
+			right: 0;
+			width: 180px;
+			text-align: center;
+
+	.alex_opinion	
+		margin-left: 0;	
+		background: url(../img/review_1_1.png) no-repeat center top;
+	.alex
+		background: url(../img/review_2_1_alex.png) no-repeat center bottom;
+	.table
+		background: url(../img/review_1_2.png) no-repeat center top;
+	.denis
+		background: url(../img/review_2_2_denis.png) no-repeat center bottom;
+	.denis_opinion
+		background: url(../img/review_1_3.png) no-repeat center top;
+	.anna	
+		margin-left: 0;	
+		background: url(../img/review_4_1_ann.png) no-repeat center bottom;
+	.anna_opinion
+		background: url(../img/review_3_1.png) no-repeat center top;
+	.chairs
+		background: url(../img/review_4_2.png) no-repeat center bottom;
+	.jane_opinion
+		background: url(../img/review_3_2.png) no-repeat center top;
+	.jane
+		background: url(../img/review_4_3_jane.png) no-repeat center bottom;
+	
+
 
 /* DETAILS */
 
@@ -664,6 +768,7 @@ header p, a, h1, h2
 					width: 20px;
 		
 		&>div
+			
 			.picture				
 				display: inline-block;				
 				width: 80px;
@@ -674,7 +779,8 @@ header p, a, h1, h2
 			
 			.text
 				display: inline-block;
-				width: 220px;
+				// width: 50%;
+				width: 150px;
 				padding: 0 0 10px 20px;
 				position: relative;
 				font-size: em(18);
@@ -824,7 +930,6 @@ header p, a, h1, h2
 				height: 10px;
 				width: 10px;
 				box-sizing: border-box;
-				top: 133px;
 				left: 50%;
 				transform: translateX(-50%);
 			&:before
@@ -836,7 +941,6 @@ header p, a, h1, h2
 				height: 15px;
 				width: 15px;
 				box-sizing: border-box;
-				top: 108px;
 				left: 50%;
 				transform: translate(-50%, 50%);
 				// bottom: -10px;
@@ -848,7 +952,6 @@ header p, a, h1, h2
 		content: '';
 		position: absolute;
 		border-left: 2px solid $orange;
-		height: 111px;
 		// bottom: -108px;
 		left: 50%;
 		transform: translateX(-50%);
@@ -857,28 +960,74 @@ header p, a, h1, h2
 	height: 142px;
 	top: 268px;
 	left: 5%;
+	&:after
+		height: 125px;
+	h3:after
+		top: 143px;
+	h3:before
+		top: 118px;
 
 .market
 	height: 68px;
 	top: 286px;
 	left: 33%;
+	&:after
+		height: 45px;
+	h3:after
+		top: 63px;
+	h3:before
+		top: 38px;
 
 .MC
 	height: 118px;
 	top: 276px;
 	left: 55%;
+	&:after
+		height: 95px;
+	h3:after
+		top: 123px;
+	h3:before
+		top: 98px;
 
 .coffee_life
 	height: 199px;
-	top: 70%;
+	top: 65%;
 	left: 55%;
+	&:after
+		height: 155px;
+	h3:after
+		top: 173px;
+	h3:before
+		top: 148px;
 
 .open_1969
 	height: 227px;
 	top: 255px;
 	left: 80%;
-			
+	&:after
+		height: 205px;
+	h3:after
+		top: 233px;
+	h3:before
+		top: 208px;
 
+#map 
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	width: 80%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	animation: show 1s linear;
+#map_google
+	border-radius: 20px;		
+	width: 100%;
+	height: 100%;
 
 
 /* FOOTER*/

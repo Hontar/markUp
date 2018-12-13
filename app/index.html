@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://i.icomoon.io/public/temp/34e0b2bc6c/UntitledProject/style.css">
     <title>Coworking</title>
-    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
    <!--  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -227,7 +227,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = ""> 
+                        <a href = "#"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>                        
@@ -247,7 +247,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = ""> 
+                        <a href = "#"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>                        
@@ -267,7 +267,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = ""> 
+                        <a href = "#"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>   
@@ -607,17 +607,47 @@
                         1969 OPEN
                     </h3>
                 </div>
-                <div id = "map">
-                    <iframe id="map_google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.
-                    3005798771194!2d36.23173552927331!3d49.988816198713415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-                    1!3m3!1m2!1s0x4127a0f1462cbb5f%3A0x2cbf5de4c1202974!2z0L_QvtC00YrQtdC30LQg4oSWMSwgNC3QuSDRjdGC0LDQtiwg0L_Qu9C-
-                    0YnQsCDQmtC-0L3RgdGC0LjRgtGD0YbRltGXLCAxLCDQpdCw0YDQutGW0LIsINCl0LDRgNC60ZbQstGB0YzQutCwINC-
-                    0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1544453369622" 
-                    frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div id = "map_block">
+                    <div class="cross_btn" id="cross">
+                        <!-- добавить класс с js -->
+                        <span class="cross_line"> 
+                            <!-- вставить палочку -->
+                        </span>
+                        <span class="cross_line"></span>
+                    </div>
+                    <div class="map">
+                        <iframe id="map_google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.
+                        3005798771194!2d36.23173552927331!3d49.988816198713415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                        1!3m3!1m2!1s0x4127a0f1462cbb5f%3A0x2cbf5de4c1202974!2z0L_QvtC00YrQtdC30LQg4oSWMSwgNC3QuSDRjdGC0LDQtiwg0L_Qu9C-
+                        0YnQsCDQmtC-0L3RgdGC0LjRgtGD0YbRltGXLCAxLCDQpdCw0YDQutGW0LIsINCl0LDRgNC60ZbQstGB0YzQutCwINC-
+                        0LHQu9Cw0YHRgtGMLCA2MTAwMA!5e0!3m2!1sru!2sua!4v1544453369622" 
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    
                 </div>
             </div>
         </section>
-        <div class = "pop_up">
+        <div class = "pop_up">            
+            <div class="cross_btn" id="cross">
+                <!-- добавить класс с js -->
+                <span class="cross_line"> 
+                    <!-- вставить палочку -->
+                </span>
+                <span class="cross_line"></span>
+            </div>      
+            <p class="thank">
+                <span>
+                    Thank you,
+                </span>
+                your request has been accepted!
+            </p>
+                             
+            <p class="central_image">
+                We are glad that you joined us
+            </p>
+            <p class="manager_contact">
+                Our manager will contact you shortly.
+            </p>            
         </div>
     </main>
     <footer>

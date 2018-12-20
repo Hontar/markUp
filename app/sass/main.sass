@@ -28,6 +28,9 @@ $btnRed: #c11b35;
 
 $browser-context: 16; // Default
 
+// import media
+
+
 @function em($pixels, $context: $browser-context) 
   @return #{$pixels/$context}em;
 
@@ -76,8 +79,6 @@ button
 	cursor: pointer;
 	transition: background-color 0.5s ease;	
 	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
-
-
 
 
 /* HEADER */
@@ -136,7 +137,6 @@ header p, a, h1, h2
 		a
 			font-size: em(20);
 
-
 .menu, .address, .phone, .networks 
 	display: flex;
 	align-items: center;
@@ -157,8 +157,6 @@ header p, a, h1, h2
 			justify-content: center;
 			align-items: center;		
 			height: 25px;
-
-	
 
 
 /* MAIN BANNER */
@@ -188,6 +186,20 @@ header p, a, h1, h2
 
 /* РАЗОБРАТЬСЯ С ПЛАВНЫМ ПЕРЕВОХОД ПО ССЫЛКЕ*/
 
+form 
+	input
+		width: 100%;
+		padding: 10px;
+		background-color: white;
+		border: 1px solid white;
+		outline: none;
+		line-height: 1.1;
+	input:focus
+		box-shadow: 0 0 10px rgba($burgundy,1);
+	button
+		color: white;		
+		transition: all 0.5s ease;
+
 .booking_form
 	position: relative;
 	background-color: rgba(255, 224, 146, 0.8);
@@ -198,18 +210,9 @@ header p, a, h1, h2
 		padding-bottom: 30px;
 	form 
 		input
-			width: 100%;
 			margin-bottom: 10px;
-			padding: 10px;
-			background-color: white;
-			border: 1px solid white;
-			outline: none;
-			line-height: 1.1;
-			font-size: em(18);
-		input:focus
-			box-shadow: 0 0 10px rgba(89,31,35,1);;
-		button
-			color: white;
+			font-size: em(18);		
+		button			
 			background-color: $blue;
 			padding: 10px 40px;
 			font-size: em(28);
@@ -250,13 +253,11 @@ header p, a, h1, h2
 	border-right: 1px solid #22221d;
 
 
-
 /* WHY WE*/
 
 #advantage
 	height: 100%;
-	background: linear-gradient(to right, rgba($mainBackground, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat
-	// background: url("../img/advantage.png") top left no-repeat
+	background: linear-gradient(to right, rgba($mainBackground, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat;
 	padding-top: 25px;
 	margin-bottom: 25px;
 	h2
@@ -307,20 +308,18 @@ header p, a, h1, h2
 				font-size: em(54);
 				font-weight: 500;
 				color: $textBrown;	
-				line-height: 1;			
-				&:before
-					content: "\2018 \2018";
+				line-height: 1;	
+				&:before, &:after	
 					height: 61px;
 					font-size: em(48);
-					position: absolute;
+					position: absolute;	
+				&:before
+					content: "\2018 \2018";					
 					// margin-top: -25px;
 					// margin-left: 65px;
 					line-height: 61px;
 				&:after
-					content: "\2019 \2019";
-					height: 61px;
-					font-size: em(48);
-					position: absolute;
+					content: "\2019 \2019";					
 					margin-top: 30px;
 					// line-height: 61px;
 				span
@@ -374,7 +373,6 @@ header p, a, h1, h2
 
 #our_offices
 	height: 100%;
-	// margin-bottom: 25px;
 	max-width: 1100px;
 
 .seats_50, .seats_20, .seats_6
@@ -388,7 +386,7 @@ header p, a, h1, h2
 
 .seats_50
 	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($orange, 0.9) 60%), url("../img/50_seats.png") top right no-repeat
-	button:hover
+	button:hover>a
 		background-color: rgba($burgundy, 0.9);
 
 .article
@@ -403,7 +401,6 @@ header p, a, h1, h2
 		font-weight: 800;
 		font-size: em(36);
 		color: #fff;
-		// padding: 11px 0;
 		width: 365px;
 		&:before, &:after
 			content: "";
@@ -415,13 +412,13 @@ header p, a, h1, h2
 			left: -13%;
 		&:after	
 			right: -13%;
-	button		
+		
+	button>a		
 		background-color: #edd3b6;
 		padding: 10px 75px;
-		transition: all 0.5s ease;
-		&>a
-			color: $textBrown;
-			// font-weight: 800;
+		transition: all 0.5s ease;		
+		display: inline-block;
+		color: $textBrown;
 	button:hover>a
 		color: $mainBackground;
 
@@ -443,22 +440,17 @@ header p, a, h1, h2
 		background: no-repeat center right url(../img/arrow_white.png);
 		padding-right: 25px;
 
-		// .icon-arrow-right2:before 
-		// 	content: "\ea3c";
-		// 	position: absolute;
-		// 	font-size: 18px;
-		// 	line-height: 30px;
-
 .seats_20
 	background: linear-gradient(to left, rgba(0,0,0, 0) 30%, rgba($burgundy, 0.9) 60%), url("../img/20_seats.png") top right no-repeat
-	button:hover
+	button:hover>a
 		background-color: rgba($orange, 0.9);
 
 .seats_6
 	background: linear-gradient(to right, rgba(0,0,0, 0) 30%, rgba($blue, 0.9) 60%), url("../img/6_seats.png") top right no-repeat
-	button:hover
-		background-color: rgba($btnRed, 0.9);
-			
+	button:hover>a
+		background-color: rgba($burgundy, 0.9);
+
+
 /* DISCOUNTS */
 
 #discount
@@ -508,21 +500,11 @@ header p, a, h1, h2
 	form 
 		margin: 10px 0;
 		input
-			width: 100%;
 			margin: 10px 0;
-			padding: 10px;
-			background-color: white;
-			border: 1px solid white;
-			outline: none;
-			line-height: 1.1;
-			font-size: em(24);
-		input:focus
-			box-shadow: 0 0 10px rgba(89,31,35,1);;
-		button
-			color: white;
+			font-size: em(24);		
+		button			
 			background-color: $blue;
-			padding: 10px 90px;
-			transition: all 0.5s ease;
+			padding: 10px 90px;			
 		button:hover
 			background-color: $btnBlue;
 
@@ -541,7 +523,6 @@ header p, a, h1, h2
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
-	// height: 100%;
 .statistic_wrapper
 	height: 100%;
 	width: 100%;
@@ -565,7 +546,6 @@ header p, a, h1, h2
 		text-align: center;
 		line-height: 1;
 	h3
-		// display: block;
 		margin: 30px auto 0;
 		position: relative;
 		border: 5px solid $mainBackground;
@@ -626,51 +606,51 @@ header p, a, h1, h2
 #reviews
 	padding: 105px 0;
 	position: relative;
+.slider_mobile
+	display: none;
 .slider_full_size
 	margin: 0 auto;
 	overflow: hidden;
 .slider_not_active
 	display: none;
 .slider_active
-	// float: left;
+	max-width: 1124px;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	// text-align: center;
 	width: 100%;
 	transition: margin 0.8s ease-out;
-	margin-left: 0px;	
+	margin: 0 auto;
+	// margin-left: 0px;	
 	.down
 		margin-bottom: 6px;
 	.up, .down
 		display: inline-block;
-		max-width: 358px;
+		max-width: 32%;
 		width: 100%;
 		height: 400px;
 		overflow: hidden;
 		text-align: center;
 		position: relative;
 	.up:not(:first-child), .down
-		margin-left: -173px;
+		margin-left: -15.5%;
 	.opinion, 
 		font-size: em(24);
 		line-height: 1.2;
 		color: rgb(252, 251, 249);
 		text-align: center;
-		width: 270px;
+		width: 75%;
 		margin: 30px auto 10px;
 	.opinion_href
 		font-size: em(16);
-		// line-height: 1.2;
 		color: rgb(252, 251, 249);
-		// text-align: center;
 
 	.opinion_author
 		font-size: em(24);
 		font-weight: 800;
 		line-height: 0.3;
 		color: $textBrown;
-		width: 265px;
+		width: 60%;
 		height: 60px;
 		left: 50%;
 		transform: translateX(-50%);
@@ -736,16 +716,16 @@ header p, a, h1, h2
 	
 .prev
 	top: 50%;
-	left: 10px;
+	left: 7%;
 	transform: translateY(-50%);
 	&:hover
-		left: 0;
+		left: 6%;
 .next
 	top: 50%;
-	right: 10px;
+	right: 7%;
 	transform: rotate(180deg) translateY(50%);
 	&:hover
-		right: 0;
+		right: 6%;
 
 
 /* DETAILS */
@@ -772,8 +752,7 @@ header p, a, h1, h2
 			width: 70%;
 			align-self: center;
 			justify-content: center;
-			height: 100%;
-			// padding: 0 40px;			
+			height: 100%;			
 			p
 				position: relative;	
 				top: 10%;
@@ -788,7 +767,6 @@ header p, a, h1, h2
 					font-size: em(24);
 					position: absolute;
 					margin-top: -25px;
-					// margin-left: 65px;
 					line-height: 61px;
 				&:after
 					content: "\2019 \2019";
@@ -796,11 +774,9 @@ header p, a, h1, h2
 					font-size: em(24);
 					position: absolute;
 					margin-top: 42px;
-					// line-height: 61px;
 				span
 					display: inline-block;
-					width: 20px;
-		
+					width: 20px;		
 		&>div
 			
 			.picture				
@@ -813,7 +789,6 @@ header p, a, h1, h2
 			
 			.text
 				display: inline-block;
-				// width: 50%;
 				width: 150px;
 				padding: 0 0 10px 20px;
 				position: relative;
@@ -858,7 +833,7 @@ header p, a, h1, h2
 	left: 10%;	
 	padding: 40px;
 	text-align: center;
-	z-index: 5;
+	z-index: 15;
 	background-color: rgba(150, 192, 210, 0.85);	
 	border-radius: 10px;
 	h2
@@ -878,23 +853,15 @@ header p, a, h1, h2
 	form 
 		margin: 10px 0;
 		input
-			width: 100%;
-			margin: 10px 0;
-			padding: 10px;
-			background-color: white;
-			border: 1px solid white;
-			outline: none;
-			line-height: 1.1;
-			font-size: em(24);
-		input:focus
-			box-shadow: 0 0 10px rgba(89,31,35,1);;
+			margin: 10px 0;			
+			font-size: em(24);		
 		button
-			color: white;
 			background-color: $btnRed;
 			padding: 10px 40px;
-			transition: all 0.5s ease;
 		button:hover
 			background-color: $btnRed;
+
+
 .join_team
 	position: absolute;
 	bottom: 0;
@@ -977,16 +944,14 @@ header p, a, h1, h2
 				box-sizing: border-box;
 				left: 50%;
 				transform: translate(-50%, 50%);
-				// bottom: -10px;
-				// left: 10px;
-.park, .market, .MC, .coffee_life, .open_1969
+				
+.park, .market, .MC, .coffee_life, #open_1969
 	position: absolute;
 	display: inline-block;
 	&:after
 		content: '';
 		position: absolute;
 		border-left: 2px solid $orange;
-		// bottom: -108px;
 		left: 50%;
 		transform: translateX(-50%);
 	
@@ -1034,10 +999,11 @@ header p, a, h1, h2
 	h3:before
 		top: 148px;
 
-.open_1969
+#open_1969
+	cursor: pointer;
 	height: 227px;
 	top: 255px;
-	left: 80%;
+	right: 10%;
 	&:after
 		height: 205px;
 	h3:after
@@ -1047,16 +1013,15 @@ header p, a, h1, h2
 
 #map_block.active
 	display: block;
-	opacity: 1;
+	// opacity: 1;
 #map_block
-	// display: none;
+	display: none;
 	position: absolute;
 	width: 80%;
 	height: 80%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// opacity: 0;
 	box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	animation: show 1s linear;
@@ -1094,13 +1059,13 @@ header p, a, h1, h2
 		transform-origin: 25px 1px;
 
 
-
 /* POP UP*/
-.pop_up.active
+
+#pop_up.active
 	height: 530px;
 	opacity: 1;
 	display: block;
-.pop_up
+#pop_up
 	display: none;
 	max-width: 870px;
 	width: 100%;
@@ -1108,15 +1073,12 @@ header p, a, h1, h2
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// background-color: #f9f6d6;
 	text-align: center;
 	border-radius: 20px;
 	z-index: 20;
-	// -webkit-animation-name: fadeIn;
 	// animation: fadeIn 1s linear;
-
-
-
+.thank, .central_image, .manager_contact
+	padding: 0 20px;
 .thank
 	display: block;
 	height: 140px;
@@ -1132,12 +1094,13 @@ header p, a, h1, h2
 		font-size: em(20);
 		line-height: 90px;
 .central_image
-	font-size: em(40);
-	font-weight: 500;
-	color: $burgundy;
 	height: 300px;
-	line-height: 300px;
 	background: url(../img/pop_up_backgrnd.png) center center/cover no-repeat $mainBackground;
+	p
+		font-size: em(40);
+		font-weight: 700;
+		color: $burgundy;	
+		line-height: 300px;
 .manager_contact
 	height: 140px;
 	font-size: em(36);
@@ -1146,10 +1109,10 @@ header p, a, h1, h2
 	background-color: $burgundy;
 	color: #fafafa;
 	border-radius: 0 0 20px 20px;
-	
 
 
 /* FOOTER*/
+
 footer	
 	background-color: $burgundy;
 	padding: 5px 0;
@@ -1162,9 +1125,15 @@ footer
 		font-size: em(20);
 		color: $textLight;
 
-.coworking, .follow, .contact
-	float: left;
-	width: 33%;
+footer>.wrap
+	display: flex;
+	flex-direction: row;
+	align-items: space-between;
+	justify-content: space-between;
+
+// .coworking, .follow, .contact
+// 	float: left;
+// 	width: 33%;
 
 .coworking
 	text-align: left;
@@ -1184,11 +1153,7 @@ footer
 		justify-content: center;
 		align-items: center;		
 		height: 25px;
-			
 
 .contact
 	text-align: right;
-
-	
-
 

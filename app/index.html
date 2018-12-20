@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css"> 
-    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/34e0b2bc6c/UntitledProject/style.css">
+    <link rel="stylesheet" href="css/media.css"> 
+    <!-- <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/34e0b2bc6c/UntitledProject/style.css"> -->
     <title>Coworking</title>
     <script type="text/javascript" src="js/menu.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/maskedinput/src/jquery.maskedinput.js"></script>
    <!--  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -118,8 +121,14 @@
                         </h3>
                         <form>
                             <input class = "name" type = "text" placeholder = "Your name">
-                            <input class = "phone_number" type = "tel" placeholder = "Your phone number">
-                            <button class = "pop_up_thank" type = "submit"> 
+                            <input class = "phone_number" type = "tel" id = "phone" placeholder = "Your phone number" maxlength="17"> 
+                                <!-- onfocus="inputFocus(event)" onkeypress="getNumbers(event)" -->
+                                <script type="text/javascript">
+                                    jQuery(function($){
+                                    $("#phone").mask("+38(099) 999-9999");
+                                    });
+                                 </script>
+                            <button class = "pop_up_thank" type="submit" onclick="validateForm(event);"> 
                                 book
                             </button>
                         </form>
@@ -227,7 +236,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = "#"> 
+                        <a href = "#discount"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>                        
@@ -247,7 +256,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = "#"> 
+                        <a href = "#discount"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>                        
@@ -267,7 +276,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto numquam obcaecati laborum dignissimos inventore sapiente quae nobis aliquid commodi animi nostrum odit, repellendus sunt veritatis dolorum?
                         </p>
-                        <a href = "#"> 
+                        <a href = "#discount"> 
                             <!-- href!!! -->
                             see more 
                             <span class="icon-arrow-right2"></span>   
@@ -296,8 +305,8 @@
                     </h2>                    
                     <form>
                         <input class = "name" type = "text" placeholder = "Your name">
-                        <input class = "phone_number" type = "tel" placeholder = "Your phone number">
-                        <button class = "pop_up_thank" type = "submit"> 
+                        <input class = "phone_number" type = "tel" placeholder = "Your phone number" maxlength="17">
+                        <button class = "pop_up_thank" type = "submit" onclick="validateForm(event)"> 
                             book
                         </button>
                     </form>
@@ -491,6 +500,66 @@
                     </div>
                 </div>
             </div>
+            <div class="slider_mobile">
+                <!-- <div class="slider_one"> -->
+                    <div class = "alex_opinion active">
+                        <div class = "opinion_author">
+                            <h4>
+                                Alex, 35
+                            </h4>
+                            <p>
+                                web-designer
+                            </p>
+                        </div>
+                        <p class = "opinion">
+                            Сonsectetuer adipiscing  elit. Aenean commodo ligula eget dolor. Aenean massa.
+                        </p>
+                        <a href="@" class = "opinion_href">ooo</a>
+                    </div>
+                    <div class = "denis_opinion">
+                        <div class = "opinion_author">
+                            <h4>
+                                Denis, 28
+                            </h4>
+                            <p>
+                                php developer
+                            </p>
+                        </div> 
+                        <p class = "opinion">
+                            Dis parturient montes,  nascetur ridiculus mus. Onec quam felis ultrici esnec, pelentesque.
+                        </p>
+                        <a href="#" class = "opinion_href">ooo</a>
+                    </div>
+                    <div class = "anna_opinion">
+                        <div class = "opinion_author">
+                            <h4>
+                                Anna, 23
+                            </h4>
+                            <p>
+                                art director
+                            </p>
+                        </div>                        
+                        <p class = "opinion">
+                            Aenean massa. Cum sociis  natoque penatibus et  magnis dis parturien montes, nascetur.
+                        </p>
+                        <a href="#" class = "opinion_href">ooo</a>  
+                    </div> 
+                    <div class = "jane_opinion">
+                            <div class = "opinion_author">
+                                <h4>
+                                    Jane, 27
+                                </h4>
+                                <p>
+                                    jurnalist
+                                </p>
+                            </div>
+                            <p class = "opinion">
+                                Fringilla vel, aliquet nec,  vulputate eget, arcu. In  enim justo, rhoncus ut, imperdiet a, venat.
+                            </p>
+                            <a href="#" class = "opinion_href">ooo</a> 
+                    </div>
+                <!-- </div> -->
+            </div>
             <button class = "next" type = "button"></button>
         </section>
         <section id = "details" class = "wrap">
@@ -558,8 +627,8 @@
                 </p>
                 <form>
                     <input class = "name" type = "text" placeholder = "Your name">
-                    <input class = "phone_number" type = "tel" placeholder = "Your phone number">
-                    <button class = "pop_up_thank" type = "submit"> 
+                    <input class = "phone_number" type = "tel" placeholder = "Your phone number" maxlength="17">
+                    <button class = "pop_up_thank" type = "submit" onclick="validateForm(event)"> 
                         take part
                     </button>
                 </form>
@@ -602,7 +671,7 @@
                         Coffee life
                     </h3>
                 </div>
-                <div class = "open_1969">
+                <div id = "open_1969">
                     <h3>
                         1969 OPEN
                     </h3>
@@ -627,7 +696,7 @@
                 </div>
             </div>
         </section>
-        <div class = "pop_up">            
+        <div id = "pop_up">            
             <div class="cross_btn" id="cross">
                 <!-- добавить класс с js -->
                 <span class="cross_line"> 
@@ -641,10 +710,11 @@
                 </span>
                 your request has been accepted!
             </p>
-                             
-            <p class="central_image">
-                We are glad that you joined us
-            </p>
+            <div class="central_image">
+                <p>
+                    We are glad that you joined us
+                </p>
+            </div> 
             <p class="manager_contact">
                 Our manager will contact you shortly.
             </p>            

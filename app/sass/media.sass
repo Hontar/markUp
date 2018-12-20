@@ -1,0 +1,793 @@
+$bp-babybear: "(max-width: 480px)";
+$bp-mamabear: "(max-width: 1024px)";
+$bp-papabear: "(max-width: 1224px)";
+$bp-bigpapabear: "(min-width: 1224px)";
+
+$mainBackground: #f9f6d6;
+$purple: rgb(175, 139, 189);
+$orange: rgb(221, 136, 42);
+$blue: rgb(132, 189, 209);
+$burgundy: rgb(95, 29, 31);
+$textBrown: #3c0a0d;
+
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) 
+  @return #{$pixels/$context}em;   
+
+@media only screen and (max-width: 1600px) 
+    .wrap
+        max-width: 80%;
+    .booking
+	    right: 10%;
+    #advantage .inner_grid 
+        blockquote
+            width: 45%;
+    .slider_active 
+        .opinion
+            font-size: em(22);
+        .up, .down
+            height: 380px;
+    #open_1969
+        right: 5%;
+
+@media only screen and (max-width: 1200px) 
+    .wrap
+        max-width: 90%;
+    .booking
+	    right: 5%;
+    #advantage .inner_grid 
+        blockquote
+            width: 40%;
+    .discount_form
+        right: -5%;
+    .slider_active 
+        .opinion
+            font-size: em(22);
+        .up, .down
+            height: 380px;
+
+    
+
+
+@media only screen and (max-width: 992px)
+    .wrap
+        max-width: 90%;
+    .networks
+        width: 200px;
+    .booking
+	    right: 5%;
+    #advantage .inner_grid 
+        flex-flow: row wrap;            
+        blockquote
+            width: 100%;                
+            height: 15%;
+            p
+				top: 40%;
+				font-size: em(50);
+				&:before, &:after	
+					height: 54px;
+					font-size: em(44);
+				&:before
+					// margin-top: -25px;
+					// margin-left: 65px;
+					line-height: 54px;
+				&:after
+					margin-top: 30px;
+					// line-height: 61px;
+				span
+					width: 60px; 
+    // .inner_wrapper
+    //         width: 100%;
+    //         height: 80%;
+    //         display: flex;
+    //         flex-flow: column wrap;
+    //         align-items: space-between;
+    //         justify-content: space-between;	
+    //         padding: 40px;
+    // &>div
+    //     .picture				
+    //         display: inline-block;				
+    //         width: 65px;
+    //         height: 130px;
+    //         text-align: right;
+    //         .who_pictogram
+    //             height: 50px;
+        
+    //     .text
+    //         display: inline-block;
+    //         width: 180px;
+    //         padding: 0 0 10px 20px;
+    //         position: relative;
+    //         font-size: em(16);
+    //         line-height: 1.2;
+    //         font-weight: 500;
+    //         &:before
+    //             content: '';
+    //             position: absolute;
+    //             border-left: 1px solid #6a6a6a;
+    //             height: 130px;
+    //             bottom: -10px;
+    //             left: 10px;
+    //         &:after
+    //             content: '';
+    //             position: absolute;
+    //             border-bottom: 1px solid #6a6a6a;
+    //             width: 150px;
+    //             bottom: 0;
+    //             left: 0;
+    //     .right
+    //         width: 130px;
+
+
+    /* OUR OFFICES */
+    .article
+        width: 45%;
+        h3:after
+            margin: 0;
+    .text_seats
+        &>p, &>a
+            font-size: em(22);
+    .girl img
+        left: 0;
+    .discount_form
+        z-index: 15;
+        right: -3%;
+    .space, .computers, .offices, .customers 
+        h3:after
+            margin: 0;
+            
+
+    
+    .slider_active 
+        .opinion
+            font-size: em(18);
+        .up, .down
+            height: 320px;
+        .opinion, 
+            font-size: em(18);
+            margin: 15px auto 10px;
+            width: 70%;
+        .opinion_author
+            font-size: em(20);
+            h4
+                width: 100%;
+            p
+                width: 100%;
+
+    #details
+        background: linear-gradient(to top, rgba($mainBackground, 1)15px, rgba(0,0,0, 0)20%), url(../img/details_background.png) no-repeat center top;
+
+    .details_items
+        blockquote					
+            width: 50%;
+        
+    #location
+        background: url(../img/location.png) no-repeat center 200px;
+
+        .frame
+            height: 90%;
+            width: 100%;
+            h3
+                &:after, &:before
+                    margin: 0;
+
+
+
+    .park, .market, .MC, .coffee_life, #open_1969
+        &:after
+            margin: 0;
+    #map_block.active
+        display: block;
+    #map_block
+        width: 90%;
+        top: 55%;
+
+    #pop_up
+        max-width: 80%;
+        // left: 45%;
+    .thank
+        font-size: em(30);
+        line-height: 1;
+    .thank span	
+        width: 100%;
+        line-height: 80px;
+    .central_image 
+        height: 200px;
+        padding: 15% 10%;
+        p       
+            font-size: em(30);
+            line-height: 1.5;
+    .manager_contact        
+        font-size: em(30);
+        
+
+
+@media only screen and (max-width: 768px)
+    .menu, .address, .phone, .networks 
+        display: flex;
+        align-items: center;
+        &>img
+            padding-left: 10px;
+            height: 20px;
+        p, a
+            font-size: em(14);
+    .networks
+        width: 120px;
+        ul img
+            height: 20px;
+    .article
+        width: 53%;
+        h3
+            font-size: em(32);
+            width: 320px;
+        // &:before
+        //     left: -10%;
+        &:after	
+            // right: -10%;        
+            margin: 0;
+    .text_seats
+        &>p, &>a
+            font-size: em(20);
+    .girl img
+        display: none;
+
+
+    #statistics
+        height: 450px;	
+        background: url(../img/long_banner.png) no-repeat center center/cover;
+        padding: 0;
+    .statistic_section
+        height: 50%;
+        width: 100%; 
+    .statistic_wrapper, .statistic_section
+        align-items: baseline;
+        justify-content: space-between; 
+    .space, .computers, .offices, .customers 
+        height: 225px;
+        width: 50%;
+        p:first-child
+            width: 80%;
+            height: 100px;
+            margin: 5% auto 0;
+            font-size: em(60);
+            line-height: 80px;
+        h3
+            margin: 30px auto 0;            
+            font-size: em(24); 
+            border: 2px solid $mainBackground;           
+            width: 80%;
+            &:before, &:after               
+                width: 25px;			
+                top: 50%;
+            &:before
+                left: -8%;
+            &:after	
+                right: -8%;
+    .area 
+        position: relative;
+        // height: 100%;
+    .space h3
+        // margin-bottom: 25px;    
+    .area p:last-child
+        position: absolute;
+        bottom: 2%;
+        right: 20%;
+        text-align: end;
+        font-size: em(24);
+        font-weight: 600;        
+        width: auto;
+        height: auto;  
+
+
+
+
+        // SLIDER
+    #reviews
+        padding: 0;
+        margin-top: 60px;
+    .slider_full_size
+        display: none;
+    .slider_mobile  
+        display: block; 
+    .slider_mobile>div
+        display: none;
+    .slider_mobile>div.active
+        display: inline-block;
+        wigth: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    .opinion 
+        font-size: em(24);
+        line-height: 1.2;
+        color: rgb(252, 251, 249);
+        text-align: justify;
+        width: 70%;
+        margin: 30px auto 10px;
+    .opinion_href
+        font-size: em(16);
+        color: rgb(252, 251, 249);
+        
+    .opinion_author
+        text-align: center;
+        font-size: em(24);
+        font-weight: 800;
+        line-height: 0.3;
+        color: $textBrown;
+        width: 70%;
+        height: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        &:before, &:after
+            content: '';
+            position: absolute;
+            border: 1px solid rgba($mainBackground, 0.8);
+            width: 25px;		
+            top: 50%;
+            margin: 0;
+        &:before
+            left: -20px;
+        &:after		
+            right: -20px;
+        h4
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+        p
+            // position: absolute;
+            // right: 0;
+            width: 100%;
+            text-align: center;
+    .alex_opinion	
+        margin-left: 0;	
+        background: rgba($orange, 0.8);	
+    .denis_opinion
+        background: rgba($burgundy, 0.8);	
+    .anna_opinion
+        background: rgba($purple, 0.8);	
+    .jane_opinion
+        background: rgba($blue, 0.8);
+    .prev, .next
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        margin: 0;
+        background-image: url(../img/arrow.png);
+        width: 63px;
+        height: 51px;        
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.5s ease;        
+    .prev
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) scale(0.4);
+        &:hover
+            left: 0;
+    .next
+        top: 50%;
+        right: 0;
+        transform: rotate(180deg) translateY(50%) scale(0.4);
+        &:hover
+            right: 0;
+
+            
+             
+    
+    #details .frame
+        width: 100%;       
+            
+
+    .park, .market, .MC, .coffee_life
+        // display: none;
+    #location .frame 
+        h3
+            width: 125px;
+            font-size: em(16);
+        h3:after, h3:before
+            // border: none;
+    #open_1969
+        top: 350px; 
+        &:after
+            height: 180px;
+        h3:after
+            top: 203px;
+        h3:before
+            top: 178px;
+
+    footer
+        h3
+            font-size: em(20);
+        p
+            font-size: em(16);
+    
+      
+@media only screen and #{$bp-babybear} 
+    .wrap
+        max-width: 100%;
+    button
+	    margin-top: 10px; 
+    .top_line
+        max-height: 70px;
+        justify-content: space-around;
+    .phone, .networks 
+        display: none;
+    .navMenu
+        top: 70px;
+    .navMenu.active
+        ul
+            height: calc(100vh - 70px);
+            a
+                font-size: em(18);
+    .main_banner        
+        height: calc(100% - 70px);
+    .booking
+        width: 70vw;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+        padding: 20px 10px;
+        img
+            padding: 20px 0 25px;
+        h2
+            font-size: em(18);
+        h1
+            font-size: em(20);
+            padding-bottom: 20px;
+    .booking_form
+        padding: 20px 10px;
+        h3
+            font-size: em(18);
+            padding-bottom: 20px;
+        form 
+            input
+                margin-bottom: 10px;
+                font-size: em(16);		
+            button			
+                padding: 10px 40px;
+                font-size: em(28);
+    #advantage
+        height: 125vh;
+        margin-bottom: 0;
+        background: url("../img/advantage.png") no-repeat center top;       
+        .inner_grid
+            flex-flow: row wrap;
+            padding: 40px 0 30px;
+            height: 80vh;
+            width: 90%;            	
+            blockquote					
+                width: 100%;                
+                height: 13%;                		
+                p
+                    top: 20%;                    
+                    font-size: em(28);
+                    font-weight: 800;
+                    text-align: center;
+                    &:before, &:after	
+                        height: 20px;
+                        font-size: em(28);                        
+                    &:before                        
+                        line-height: 20px;                   
+                    span                        
+                        width: 40px;            
+            .inner_wrapper
+                width: 100%;
+                height: 100%;                
+                flex-flow: column;
+                align-items: center;                
+                padding-left: 0;
+                padding-top: 5%;                 
+            &>div                             
+                .picture				
+                    width: 70px;
+                    height: 120px;
+                    .who_pictogram
+                        height: 60px;                
+                .text
+                    width: 60vw;
+                    font-size: em(18);
+                    &:before                       
+                        height: 90px;  
+                .right
+                    width: 60vw;  
+    .article
+        width: 100%;
+        text-align: center;
+        h3            
+            font-size: em(32);            
+            width: 300px;            
+        button>a            
+            padding: 10px 55px;  
+
+    .text_seats
+        margin-top: 35px;
+        &>p
+            text-align: justify;
+        &>p, &>a
+            font-size: em(20);
+    #discount
+        height: 500px;
+        background: url(../img/discount_office_background.png) no-repeat left center/cover;
+        .frame
+            height: 100%;
+    .frame
+        border: none;
+    .girl img
+        display: none;
+    .discount_form
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        transform: translateY(0);
+        padding: 30px;
+        text-align: center;
+        z-index: 5;
+        background-color: rgba(202, 124, 40, 0.8);	
+        border-radius: 10px;
+        h2
+            font-size: em(40);
+            text-align: center;
+        p			
+            font-size: em(30);
+            font-weight: 400;		
+        form 
+            margin: 10px 0;
+            input
+                margin: 10px 0;
+                font-size: em(24);		
+            button                
+                padding: 10px 90px;			
+    // .statistic_section
+    //     height: 50%;
+    //     width: 100%;   
+    // .space, .computers, .offices, .customers 
+    //     height: 100%;
+    //     width: 50%;
+    //     p:first-child
+    //         width: 80%;
+    //         height: 50%;
+    //         margin: 5% auto 0;
+    //         font-size: em(54);
+    //     h3
+    //         margin: 5% auto 0;            
+    //         font-size: em(22); 
+    //         border: 2px solid $mainBackground;           
+    //         width: 80%;
+    //         &:before, &:after               
+    //             width: 25px;			
+    //             top: 50%;
+    //         &:before
+    //             left: -10%;
+    //         &:after	
+    //             right: -10%;
+    // .area 
+    //     position: relative;
+    //     height: 100%;
+    // .space h3
+    //     margin-top: -26%;    
+    // .area p:last-child
+    //     position: absolute;
+    //     bottom: 44%;
+    //     right: 10%;
+    //     text-align: end;
+    //     font-size: em(22);
+    //     font-weight: 600;        
+    //     width: auto;
+    //     height: auto;    
+
+        // SLIDER
+    #reviews
+        padding: 0;
+        margin-top: 60px;
+    .slider_full_size
+        display: none;
+    .slider_mobile  
+        display: block; 
+    .slider_mobile>div
+        display: none;
+    .slider_mobile>div.active
+        display: inline-block;
+        wigth: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    .opinion 
+        font-size: em(24);
+        line-height: 1.2;
+        color: rgb(252, 251, 249);
+        text-align: justify;
+        width: 70%;
+        margin: 30px auto 10px;
+    .opinion_href
+        font-size: em(16);
+        color: rgb(252, 251, 249);
+        
+    .opinion_author
+        text-align: center;
+        font-size: em(24);
+        font-weight: 800;
+        line-height: 0.3;
+        color: $textBrown;
+        width: 70%;
+        height: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        &:before, &:after
+            content: '';
+            position: absolute;
+            border: 1px solid rgba($mainBackground, 0.8);
+            width: 25px;		
+            top: 50%;
+        &:before
+            left: -20px;
+        &:after		
+            right: -20px;
+        h4
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+        p
+            // position: absolute;
+            // right: 0;
+            width: 100%;
+            text-align: center;
+    .alex_opinion	
+        margin-left: 0;	
+        background: rgba($orange, 0.8);	
+    .denis_opinion
+        background: rgba($burgundy, 0.8);	
+    .anna_opinion
+        background: rgba($purple, 0.8);	
+    .jane_opinion
+        background: rgba($blue, 0.8);
+    .prev, .next
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        margin: 0;
+        background-image: url(../img/arrow.png);
+        width: 63px;
+        height: 51px;        
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.5s ease;        
+    .prev
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) scale(0.4);
+        &:hover
+            left: 0;
+    .next
+        top: 50%;
+        right: 0;
+        transform: rotate(180deg) translateY(50%) scale(0.4);
+        &:hover
+            right: 0;
+
+    #details
+        padding-top: 0;
+        background: linear-gradient(to left, rgba($mainBackground, 0.8)200px, rgba(0,0,0, 0)), url(../img/details_background.png) no-repeat center center;
+        .frame
+            height: 100%;
+            width: 90%;
+    .details_items
+        flex-flow: row wrap;
+        width: 100%;
+        blockquote					
+            width: 100%;			
+            height: 15%; 
+            p
+                position: relative;	
+                top: 0;
+                transform: translateY(0);
+    .details_items>div
+        margin-left: 30%;
+    .details_items>div	
+        .picture		
+            width: 80px;
+            height: 120px;
+            text-align: right;
+            .who_pictogram
+                height: 65px;
+        .text
+            width: 140px;
+            padding: 0 0 10px 20px;
+            font-size: em(18);            
+            &:before                
+                height: 80px;                
+            &:after               
+                width: 150px;                
+        .right
+            width: 150px; 
+    #gift
+        height: 495px;
+        background: url(../img/join_background_black.png) no-repeat center center;
+        img
+            display: none;
+    .free_month_form
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0;	
+    .join_team       
+        display: none;
+    #location
+        background: $mainBackground;
+        padding-top: 0;
+        margin-bottom: 0;
+        .frame
+            height: 90%;
+            width: 90%;
+            p			
+                width: 80%;
+    .park, .market, .MC, .coffee_life, #open_1969
+        display: none;
+    #map_block
+        display: block;
+        width: 100%;
+        height: 70%;
+        top: 65%;
+        .cross_btn
+            display: none;
+
+    #pop_up
+        max-width: 320px;
+        left: 45%;
+    .thank
+        font-size: em(30);
+        line-height: 1;
+    .thank span	
+        line-height: 60px;
+    .central_image 
+        height: 200px;
+        padding: 15% 10%;
+        p       
+            font-size: em(30);
+            line-height: 1.5;
+            
+            
+    .manager_contact
+        height: 100px;
+        font-size: em(28);
+        line-height: 1.2;
+        padding: 15px;
+
+
+    footer>.wrap
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        &>div
+    footer
+        padding-bottom: 20px;
+        h3
+            font-size: em(20);
+            margin: 10px 0 10px;
+        p
+            font-size: em(16);
+    .coworking, .follow, .contact
+        text-align: center;
+    .follow>img 
+        margin: 15px 0 0 -5px;
+        height: 50px;
+    .f_networks ul img           
+            height: 15px;
+
+
+
+
+
+
+
+

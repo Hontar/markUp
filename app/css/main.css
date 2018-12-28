@@ -704,10 +704,10 @@ form button {
   margin: 0 auto;
   overflow: hidden; }
 
-.slider_not_active {
+.slider_set.not_active {
   display: none; }
 
-.slider_active {
+.slider_set.active {
   max-width: 1124px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -727,9 +727,9 @@ form button {
   -o-transition: margin 0.8s ease-out;
   transition: margin 0.8s ease-out;
   margin: 0 auto; }
-  .slider_active .down {
+  .slider_set.active .down {
     margin-bottom: 6px; }
-  .slider_active .up, .slider_active .down {
+  .slider_set.active .up, .slider_set.active .down {
     display: inline-block;
     max-width: 32%;
     width: 100%;
@@ -737,19 +737,19 @@ form button {
     overflow: hidden;
     text-align: center;
     position: relative; }
-  .slider_active .up:not(:first-child), .slider_active .down {
+  .slider_set.active .up:not(:first-child), .slider_set.active .down {
     margin-left: -15.5%; }
-  .slider_active .opinion {
+  .slider_set.active .opinion {
     font-size: 1.5em;
     line-height: 1.2;
     color: #fcfbf9;
     text-align: center;
     width: 75%;
     margin: 30px auto 10px; }
-  .slider_active .opinion_href {
+  .slider_set.active .opinion_href {
     font-size: 1em;
     color: #fcfbf9; }
-  .slider_active .opinion_author {
+  .slider_set.active .opinion_author {
     font-size: 1.5em;
     font-weight: 800;
     line-height: 0.3;
@@ -763,49 +763,49 @@ form button {
     bottom: 15px;
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute; }
-    .slider_active .opinion_author:before, .slider_active .opinion_author:after {
+    .slider_set.active .opinion_author:before, .slider_set.active .opinion_author:after {
       content: '';
       position: absolute;
       border: 1px solid rgba(249, 246, 214, 0.8);
       width: 25px;
       top: 50%; }
-    .slider_active .opinion_author:before {
+    .slider_set.active .opinion_author:before {
       left: -20px; }
-    .slider_active .opinion_author:after {
+    .slider_set.active .opinion_author:after {
       right: -20px; }
-    .slider_active .opinion_author h4 {
+    .slider_set.active .opinion_author h4 {
       width: 140px;
       text-align: center;
       line-height: 40px; }
-    .slider_active .opinion_author p {
+    .slider_set.active .opinion_author p {
       position: absolute;
       right: 0;
       width: 180px;
       text-align: center; }
-  .slider_active .alex_opinion {
+  .slider_set.active .alex_opinion {
     margin-left: 0;
     background: url(../img/review_1_1.png) no-repeat center top/contain; }
-  .slider_active .alex {
+  .slider_set.active .alex {
     background: url(../img/review_2_1_alex.png) no-repeat center bottom/contain; }
-  .slider_active .table {
+  .slider_set.active .table {
     background: url(../img/review_1_2.png) no-repeat center top/contain; }
-  .slider_active .denis {
+  .slider_set.active .denis {
     background: url(../img/review_2_2_denis.png) no-repeat center bottom/contain; }
-  .slider_active .denis_opinion {
+  .slider_set.active .denis_opinion {
     background: url(../img/review_1_3.png) no-repeat center top/contain; }
-  .slider_active .anna {
+  .slider_set.active .anna {
     margin-left: 0;
     background: url(../img/review_4_1_ann.png) no-repeat center bottom/contain; }
-  .slider_active .anna_opinion {
+  .slider_set.active .anna_opinion {
     background: url(../img/review_3_1.png) no-repeat center top/contain; }
-  .slider_active .chairs {
+  .slider_set.active .chairs {
     background: url(../img/review_4_2.png) no-repeat center bottom/contain; }
-  .slider_active .jane_opinion {
+  .slider_set.active .jane_opinion {
     background: url(../img/review_3_2.png) no-repeat center top/contain; }
-  .slider_active .jane {
+  .slider_set.active .jane {
     background: url(../img/review_4_3_jane.png) no-repeat center bottom/contain; }
 
-.prev, .next {
+#prev, #next {
   position: absolute;
   background-color: transparent;
   border: none;
@@ -822,22 +822,22 @@ form button {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
-.prev {
+#prev {
   top: 50%;
   left: 7%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
-  .prev:hover {
+  #prev:hover {
     left: 6%; }
 
-.next {
+#next {
   top: 50%;
   right: 7%;
   -webkit-transform: rotate(180deg) translateY(50%);
       -ms-transform: rotate(180deg) translateY(50%);
           transform: rotate(180deg) translateY(50%); }
-  .next:hover {
+  #next:hover {
     right: 6%; }
 
 /* DETAILS */

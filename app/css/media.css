@@ -5,9 +5,9 @@
     right: 10%; }
   #advantage .inner_grid blockquote {
     width: 45%; }
-  .slider_active .opinion {
+  .slider_set.active .opinion {
     font-size: 1.375em; }
-  .slider_active .up, .slider_active .down {
+  .slider_set.active .up, .slider_set.active .down {
     height: 380px; }
   #open_1969 {
     right: 5%; } }
@@ -21,9 +21,9 @@
     width: 40%; }
   .discount_form {
     right: -5%; }
-  .slider_active .opinion {
+  .slider_set.active .opinion {
     font-size: 1.375em; }
-  .slider_active .up, .slider_active .down {
+  .slider_set.active .up, .slider_set.active .down {
     height: 380px; } }
 
 @media only screen and (max-width: 992px) {
@@ -67,19 +67,19 @@
     right: -3%; }
   .space h3:after, .computers h3:after, .offices h3:after, .customers h3:after {
     margin: 0; }
-  .slider_active .opinion {
+  .slider_set.active .opinion {
     font-size: 1.125em; }
-  .slider_active .up, .slider_active .down {
+  .slider_set.active .up, .slider_set.active .down {
     height: 320px; }
-  .slider_active .opinion {
+  .slider_set.active .opinion {
     font-size: 1.125em;
     margin: 15px auto 10px;
     width: 70%; }
-  .slider_active .opinion_author {
+  .slider_set.active .opinion_author {
     font-size: 1.25em; }
-    .slider_active .opinion_author h4 {
+    .slider_set.active .opinion_author h4 {
       width: 100%; }
-    .slider_active .opinion_author p {
+    .slider_set.active .opinion_author p {
       width: 100%; }
   #details {
     background: -webkit-linear-gradient(bottom, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_background.png) no-repeat center top;
@@ -262,7 +262,7 @@
     background: rgba(175, 139, 189, 0.8); }
   .jane_opinion {
     background: rgba(132, 189, 209, 0.8); }
-  .prev, .next {
+  #prev, #next {
     position: absolute;
     background-color: transparent;
     border: none;
@@ -278,21 +278,21 @@
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
-  .prev {
+  #prev {
     top: 50%;
     left: 0;
     -webkit-transform: translateY(-50%) scale(0.4);
         -ms-transform: translateY(-50%) scale(0.4);
             transform: translateY(-50%) scale(0.4); }
-    .prev:hover {
+    #prev:hover {
       left: 0; }
-  .next {
+  #next {
     top: 50%;
     right: 0;
     -webkit-transform: rotate(180deg) translateY(50%) scale(0.4);
         -ms-transform: rotate(180deg) translateY(50%) scale(0.4);
             transform: rotate(180deg) translateY(50%) scale(0.4); }
-    .next:hover {
+    #next:hover {
       right: 0; }
   #details .frame {
     width: 100%; }
@@ -529,7 +529,7 @@
     background: rgba(175, 139, 189, 0.8); }
   .jane_opinion {
     background: rgba(132, 189, 209, 0.8); }
-  .prev, .next {
+  #prev, #next {
     position: absolute;
     background-color: transparent;
     border: none;
@@ -545,21 +545,21 @@
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
-  .prev {
+  #prev {
     top: 50%;
     left: 0;
     -webkit-transform: translateY(-50%) scale(0.4);
         -ms-transform: translateY(-50%) scale(0.4);
             transform: translateY(-50%) scale(0.4); }
-    .prev:hover {
+    #prev:hover {
       left: 0; }
-  .next {
+  #next {
     top: 50%;
     right: 0;
     -webkit-transform: rotate(180deg) translateY(50%) scale(0.4);
         -ms-transform: rotate(180deg) translateY(50%) scale(0.4);
             transform: rotate(180deg) translateY(50%) scale(0.4); }
-    .next:hover {
+    #next:hover {
       right: 0; }
   #details {
     padding-top: 0;

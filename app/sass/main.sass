@@ -611,9 +611,9 @@ form
 .slider_full_size
 	margin: 0 auto;
 	overflow: hidden;
-.slider_not_active
+.slider_set.not_active
 	display: none;
-.slider_active
+.slider_set.active
 	max-width: 1124px;
 	display: flex;
 	flex-flow: row wrap;
@@ -700,7 +700,7 @@ form
 	.jane
 		background: url(../img/review_4_3_jane.png) no-repeat center bottom/contain;
 	
-.prev, .next
+#prev, #next
 	position: absolute;
 	background-color: transparent;
 	border: none;
@@ -714,13 +714,13 @@ form
 	z-index: 10;
 	transition: all 0.5s ease;
 	
-.prev
+#prev
 	top: 50%;
 	left: 7%;
 	transform: translateY(-50%);
 	&:hover
 		left: 6%;
-.next
+#next
 	top: 50%;
 	right: 7%;
 	transform: rotate(180deg) translateY(50%);

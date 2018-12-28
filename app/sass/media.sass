@@ -22,7 +22,7 @@ $browser-context: 16;
     #advantage .inner_grid 
         blockquote
             width: 45%;
-    .slider_active 
+    .slider_set.active 
         .opinion
             font-size: em(22);
         .up, .down
@@ -40,7 +40,7 @@ $browser-context: 16;
             width: 40%;
     .discount_form
         right: -5%;
-    .slider_active 
+    .slider_set.active 
         .opinion
             font-size: em(22);
         .up, .down
@@ -138,7 +138,7 @@ $browser-context: 16;
             
 
     
-    .slider_active 
+    .slider_set.active 
         .opinion
             font-size: em(18);
         .up, .down
@@ -349,7 +349,7 @@ $browser-context: 16;
         background: rgba($purple, 0.8);	
     .jane_opinion
         background: rgba($blue, 0.8);
-    .prev, .next
+    #prev, #next
         position: absolute;
         background-color: transparent;
         border: none;
@@ -362,13 +362,13 @@ $browser-context: 16;
         cursor: pointer;
         z-index: 10;
         transition: all 0.5s ease;        
-    .prev
+    #prev
         top: 50%;
         left: 0;
         transform: translateY(-50%) scale(0.4);
         &:hover
             left: 0;
-    .next
+    #next
         top: 50%;
         right: 0;
         transform: rotate(180deg) translateY(50%) scale(0.4);
@@ -647,7 +647,7 @@ $browser-context: 16;
         background: rgba($purple, 0.8);	
     .jane_opinion
         background: rgba($blue, 0.8);
-    .prev, .next
+    #prev, #next
         position: absolute;
         background-color: transparent;
         border: none;
@@ -660,13 +660,13 @@ $browser-context: 16;
         cursor: pointer;
         z-index: 10;
         transition: all 0.5s ease;        
-    .prev
+    #prev
         top: 50%;
         left: 0;
         transform: translateY(-50%) scale(0.4);
         &:hover
             left: 0;
-    .next
+    #next
         top: 50%;
         right: 0;
         transform: rotate(180deg) translateY(50%) scale(0.4);

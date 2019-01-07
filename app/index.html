@@ -12,6 +12,8 @@
     <script type="text/javascript" src="js/menu.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/maskedinput/src/jquery.maskedinput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
    <!--  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -121,13 +123,13 @@
                         </h3>
                         <form>
                             <input class = "name" type = "text" placeholder = "Your name">
-                            <input class = "phone_number" type = "tel" id = "phone" placeholder = "Your phone number" maxlength="17"> 
+                            <input class = "phone_number" type = "tel" id = "input_phone" placeholder = "Your phone number" maxlength="17"> 
                                 <!-- onfocus="inputFocus(event)" onkeypress="getNumbers(event)" -->
                                 <script type="text/javascript">
                                     jQuery(function($){
-                                    $("#phone").mask("+38(099) 999-9999");
+                                    $("#input_phone").mask("+38(099) 999-9999");
                                     });
-                                 </script>
+                                </script>
                             <button class = "pop_up_thank" type="submit" onclick="validateForm(event);"> 
                                 book
                             </button>
@@ -305,7 +307,12 @@
                     </h2>                    
                     <form>
                         <input class = "name" type = "text" placeholder = "Your name">
-                        <input class = "phone_number" type = "tel" placeholder = "Your phone number" maxlength="17">
+                        <input class = "phone_number" type = "tel" id = "input_phone2" placeholder = "Your phone number" maxlength="17">
+                        <script type="text/javascript">
+                            jQuery(function($){
+                            $("#input_phone2").mask("+38(099) 999-9999");
+                            });
+                        </script>
                         <button class = "pop_up_thank" type = "submit" onclick="validateForm(event)"> 
                             book
                         </button>
@@ -366,7 +373,7 @@
                         <p class = "opinion">
                             Сonsectetuer adipiscing  elit. Aenean commodo ligula eget dolor. Aenean massa.
                         </p>
-                        <a href="@" class = "opinion_href">ooo</a>
+                        <a href="#" class = "opinion_href">ooo</a>
                     </div>
                     <div class = "down alex">
                         <div class = "opinion_author">
@@ -437,17 +444,6 @@
                         </p>
                         <a href="#" class = "opinion_href">ooo</a>
                     </div>
-                    <div class = "down alex">
-                        <div class = "opinion_author">
-                            <h4>
-                                Alex, 35
-                            </h4>
-                            <p>
-                                web-designer
-                            </p>
-                        </div>
-                    </div>
-                    <div class = "up table"></div>
                     <div class = "down denis">
                         <div class = "opinion_author">
                             <h4>
@@ -458,6 +454,18 @@
                             </p>
                         </div>
                     </div>
+                    <div class = "up table"></div>
+                    <div class = "down alex">
+                        <div class = "opinion_author">
+                            <h4>
+                                Alex, 35
+                            </h4>
+                            <p>
+                                web-designer
+                            </p>
+                        </div>
+                    </div>
+                    
                     <div class = "up denis_opinion">
                         <p class = "opinion">
                             Dis parturient montes,  nascetur ridiculus mus. Onec quam felis ultrici esnec, pelentesque.
@@ -627,7 +635,12 @@
                 </p>
                 <form>
                     <input class = "name" type = "text" placeholder = "Your name">
-                    <input class = "phone_number" type = "tel" placeholder = "Your phone number" maxlength="17">
+                    <input class = "phone_number" type = "tel" id = "input_phone3" placeholder = "Your phone number" maxlength="17">
+                    <script type="text/javascript">
+                        jQuery(function($){
+                        $("#input_phone3").mask("+38(099) 999-9999");
+                        });
+                    </script>
                     <button class = "pop_up_thank" type = "submit" onclick="validateForm(event)"> 
                         take part
                     </button>

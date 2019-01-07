@@ -727,8 +727,6 @@ form button {
   -o-transition: margin 0.8s ease-out;
   transition: margin 0.8s ease-out;
   margin: 0 auto; }
-  .slider_set.active .down {
-    margin-bottom: 6px; }
   .slider_set.active .up, .slider_set.active .down {
     display: inline-block;
     max-width: 32%;
@@ -736,7 +734,8 @@ form button {
     height: 400px;
     overflow: hidden;
     text-align: center;
-    position: relative; }
+    position: relative;
+    margin-bottom: 6px; }
   .slider_set.active .up:not(:first-child), .slider_set.active .down {
     margin-left: -15.5%; }
   .slider_set.active .opinion {

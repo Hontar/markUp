@@ -19,6 +19,8 @@
     right: 5%; }
   #advantage .inner_grid blockquote {
     width: 40%; }
+  .text_seats > a {
+    top: 20px; }
   .discount_form {
     right: -5%; }
   .slider_set.active .opinion {
@@ -31,40 +33,66 @@
     max-width: 90%; }
   .networks {
     width: 200px; }
+    .networks ul li:not(:first-child) {
+      margin-left: 20px; }
   .booking {
     right: 5%; }
+  #advantage.wrap {
+    max-width: 100%; }
   #advantage .inner_grid {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
+            flex-flow: row wrap;
+    height: 750px;
+    width: 545px; }
     #advantage .inner_grid blockquote {
       width: 100%;
       height: 15%; }
-  top: 40%;
-  font-size: 3.125em;
-  :before, :after {
-    height: 54px;
-    font-size: 2.75em; }
-  :before {
-    line-height: 54px; }
-  :after {
-    margin-top: 30px; }
-  span {
-    width: 60px; }
+      #advantage .inner_grid blockquote p {
+        top: 5%;
+        font-size: 2.8125em; }
+        #advantage .inner_grid blockquote p:before, #advantage .inner_grid blockquote p:after {
+          height: 54px;
+          font-size: 2.5em; }
+        #advantage .inner_grid blockquote p:before {
+          line-height: 54px; }
+        #advantage .inner_grid blockquote p:after {
+          margin-top: 30px; }
+        #advantage .inner_grid blockquote p span {
+          width: 60px; }
+  .inner_wrapper {
+    padding: 0px; }
   /* OUR OFFICES */
   .article {
-    width: 45%; }
+    width: 55%; }
     .article h3:after {
       margin: 0; }
   .text_seats > p, .text_seats > a {
     font-size: 1.375em; }
+  .seats_50 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(221, 136, 42, 0.9))), url("../img/50_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 20%, rgba(221, 136, 42, 0.9) 50%), url("../img/50_seats.png") top right no-repeat;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 20%, rgba(221, 136, 42, 0.9) 50%), url("../img/50_seats.png") top right no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(221, 136, 42, 0.9) 50%), url("../img/50_seats.png") top right no-repeat; }
+  .seats_20 {
+    background: -webkit-gradient(linear, right top, left top, color-stop(20%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(95, 29, 31, 0.9))), url("../img/20_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 20%, rgba(95, 29, 31, 0.9) 50%), url("../img/20_seats.png") top right no-repeat;
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0) 20%, rgba(95, 29, 31, 0.9) 50%), url("../img/20_seats.png") top right no-repeat;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 20%, rgba(95, 29, 31, 0.9) 50%), url("../img/20_seats.png") top right no-repeat; }
+  .seats_6 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(132, 189, 209, 0.9))), url("../img/6_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 20%, rgba(132, 189, 209, 0.9) 50%), url("../img/6_seats.png") top right no-repeat;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 20%, rgba(132, 189, 209, 0.9) 50%), url("../img/6_seats.png") top right no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(132, 189, 209, 0.9) 50%), url("../img/6_seats.png") top right no-repeat; }
   .girl img {
     left: 0; }
   .discount_form {
     z-index: 15;
     right: -3%; }
+  .space p:first-child, .computers p:first-child, .offices p:first-child, .customers p:first-child {
+    font-size: 3.375em; }
   .space h3:after, .computers h3:after, .offices h3:after, .customers h3:after {
     margin: 0; }
   .slider_set.active .opinion {
@@ -81,6 +109,8 @@
       width: 100%; }
     .slider_set.active .opinion_author p {
       width: 100%; }
+  #details.wrap {
+    max-width: 100%; }
   #details {
     background: -webkit-linear-gradient(bottom, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_background.png) no-repeat center top;
     background: -o-linear-gradient(bottom, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_background.png) no-repeat center top;
@@ -119,7 +149,7 @@
     font-size: 1.875em; } }
 
 @media only screen and (max-width: 768px) {
-  .menu, .address, .phone, .networks {
+  .menu, .address, .networks {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -128,24 +158,96 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    .menu > img, .address > img, .phone > img, .networks > img {
+    .menu > img, .address > img, .networks > img {
       padding-left: 10px;
       height: 20px; }
-    .menu p, .menu a, .address p, .address a, .phone p, .phone a, .networks p, .networks a {
+    .menu p, .menu a, .address p, .address a, .networks p, .networks a {
       font-size: 0.875em; }
   .networks {
     width: 120px; }
     .networks ul img {
       height: 20px; }
+  .phone {
+    display: none; }
+  #advantage {
+    height: 125vh;
+    min-height: 1080px;
+    margin-bottom: 0;
+    background: url("../img/advantage.png") no-repeat center top; }
+    #advantage .inner_grid {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      padding: 40px 0 30px;
+      height: 80vh;
+      width: 90%; }
+      #advantage .inner_grid blockquote {
+        width: 100%;
+        height: 13%; }
+        #advantage .inner_grid blockquote p {
+          top: 20%;
+          font-size: 1.75em;
+          font-weight: 800;
+          text-align: center; }
+          #advantage .inner_grid blockquote p:before, #advantage .inner_grid blockquote p:after {
+            height: 20px;
+            font-size: 1.75em; }
+          #advantage .inner_grid blockquote p:before {
+            line-height: 20px; }
+          #advantage .inner_grid blockquote p span {
+            width: 40px; }
+      #advantage .inner_grid .inner_wrapper {
+        width: 100%;
+        height: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-flow: column;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-left: 0;
+        padding-top: 5%; }
+      #advantage .inner_grid > div .picture {
+        width: 70px;
+        height: 120px; }
+        #advantage .inner_grid > div .picture .who_pictogram {
+          height: 60px; }
+      #advantage .inner_grid > div .text {
+        width: 60vw;
+        font-size: 1.125em; }
+        #advantage .inner_grid > div .text:before {
+          height: 90px; }
+      #advantage .inner_grid > div .right {
+        width: 60vw; }
   .article {
-    width: 53%; }
+    width: 100%; }
     .article h3 {
       font-size: 2em;
       width: 320px; }
     .article:after {
       margin: 0; }
   .text_seats > p, .text_seats > a {
-    font-size: 1.25em; }
+    font-size: 1.625em; }
+  .seats_50 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(0%, rgba(221, 136, 42, 0.8))), url("../img/50_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(221, 136, 42, 0.8) 0%), url("../img/50_seats.png") top right no-repeat;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(221, 136, 42, 0.8) 0%), url("../img/50_seats.png") top right no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(221, 136, 42, 0.8) 0%), url("../img/50_seats.png") top right no-repeat; }
+  .seats_20 {
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(0%, rgba(95, 29, 31, 0.8))), url("../img/20_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(95, 29, 31, 0.8) 0%), url("../img/20_seats.png") top right no-repeat;
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0) 0%, rgba(95, 29, 31, 0.8) 0%), url("../img/20_seats.png") top right no-repeat;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(95, 29, 31, 0.8) 0%), url("../img/20_seats.png") top right no-repeat; }
+  .seats_6 {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(0%, rgba(132, 189, 209, 0.8))), url("../img/6_seats.png") top right no-repeat;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(132, 189, 209, 0.8) 0%), url("../img/6_seats.png") top right no-repeat;
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(132, 189, 209, 0.8) 0%), url("../img/6_seats.png") top right no-repeat;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(132, 189, 209, 0.8) 0%), url("../img/6_seats.png") top right no-repeat; }
   .girl img {
     display: none; }
   #statistics {
@@ -295,18 +397,14 @@
     #next:hover {
       right: 0; }
   #details .frame {
-    width: 100%; }
-  #location .frame h3 {
-    width: 125px;
-    font-size: 1em; }
-  #open_1969 {
-    top: 350px; }
-    #open_1969:after {
-      height: 180px; }
-    #open_1969 h3:after {
-      top: 203px; }
-    #open_1969 h3:before {
-      top: 178px; }
+    border: none; }
+  #gift.wrap {
+    max-width: 100%; }
+  #location .frame {
+    height: 100%; }
+    #location .frame h3 {
+      width: 125px;
+      font-size: 1em; }
   footer h3 {
     font-size: 1.25em; }
   footer p {
@@ -360,60 +458,8 @@
     .booking_form form button {
       padding: 10px 40px;
       font-size: 1.75em; }
-  #advantage {
-    height: 125vh;
-    margin-bottom: 0;
-    background: url("../img/advantage.png") no-repeat center top; }
-    #advantage .inner_grid {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-flow: row wrap;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      padding: 40px 0 30px;
-      height: 80vh;
-      width: 90%; }
-      #advantage .inner_grid blockquote {
-        width: 100%;
-        height: 13%; }
-        #advantage .inner_grid blockquote p {
-          top: 20%;
-          font-size: 1.75em;
-          font-weight: 800;
-          text-align: center; }
-          #advantage .inner_grid blockquote p:before, #advantage .inner_grid blockquote p:after {
-            height: 20px;
-            font-size: 1.75em; }
-          #advantage .inner_grid blockquote p:before {
-            line-height: 20px; }
-          #advantage .inner_grid blockquote p span {
-            width: 40px; }
-      #advantage .inner_grid .inner_wrapper {
-        width: 100%;
-        height: 100%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-flow: column;
-            -ms-flex-flow: column;
-                flex-flow: column;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
-        padding-left: 0;
-        padding-top: 5%; }
-      #advantage .inner_grid > div .picture {
-        width: 70px;
-        height: 120px; }
-        #advantage .inner_grid > div .picture .who_pictogram {
-          height: 60px; }
-      #advantage .inner_grid > div .text {
-        width: 60vw;
-        font-size: 1.125em; }
-        #advantage .inner_grid > div .text:before {
-          height: 90px; }
-      #advantage .inner_grid > div .right {
-        width: 60vw; }
+  .scroll_down {
+    bottom: 7%; }
   .article {
     width: 100%;
     text-align: center; }
@@ -604,7 +650,8 @@
   .details_items > div .right {
     width: 150px; }
   #gift {
-    height: 495px;
+    min-height: 493px;
+    max-height: 493px;
     background: url(../img/join_background_black.png) no-repeat center center; }
     #gift img {
       display: none; }

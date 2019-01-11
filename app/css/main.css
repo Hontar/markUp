@@ -49,6 +49,7 @@ button {
 header {
   background-color: #0c0105;
   height: 100vh;
+  min-height: 730px;
   overflow: hidden; }
 
 header p, a, h1, h2 {
@@ -56,7 +57,7 @@ header p, a, h1, h2 {
 
 .top_line {
   padding: 20px 0;
-  max-height: 90px;
+  min-height: 90px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -277,6 +278,7 @@ form button {
 /* WHY WE*/
 #advantage {
   height: 100%;
+  min-height: 840px;
   background: -webkit-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
   background: -o-linear-gradient(left, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
   background: linear-gradient(to right, #f9f6d6 10px, rgba(0, 0, 0, 0) 10%), url("../img/advantage.png") top left no-repeat;
@@ -615,7 +617,7 @@ form button {
   height: 100%;
   width: 50%; }
   .space p:first-child, .computers p:first-child, .offices p:first-child, .customers p:first-child {
-    width: 180px;
+    width: 80%;
     height: 100px;
     margin: 40px auto 0;
     font-size: 4.25em;
@@ -632,7 +634,7 @@ form button {
     font-size: 1.5em;
     color: #f9f6d6;
     text-transform: lowercase;
-    width: 180px; }
+    width: 80%; }
     .space h3:before, .space h3:after, .computers h3:before, .computers h3:after, .offices h3:before, .offices h3:after, .customers h3:before, .customers h3:after {
       content: "";
       position: absolute;
@@ -842,6 +844,7 @@ form button {
 /* DETAILS */
 #details {
   height: 100vh;
+  min-height: 880px;
   background: -webkit-linear-gradient(bottom, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_chair.png) no-repeat center top, url(../img/details_background.png) no-repeat center top;
   background: -o-linear-gradient(bottom, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_chair.png) no-repeat center top, url(../img/details_background.png) no-repeat center top;
   background: linear-gradient(to top, #f9f6d6 15px, rgba(0, 0, 0, 0) 20%), url(../img/details_chair.png) no-repeat center top, url(../img/details_background.png) no-repeat center top;
@@ -945,6 +948,7 @@ form button {
 /* GIFT */
 #gift {
   height: 100vh;
+  min-height: 740px;
   background: -webkit-linear-gradient(left, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), -webkit-linear-gradient(right, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat center bottom, url(../img/join_background_black.png) no-repeat center bottom;
   background: -o-linear-gradient(left, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), -o-linear-gradient(right, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat center bottom, url(../img/join_background_black.png) no-repeat center bottom;
   background: linear-gradient(to right, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), linear-gradient(to left, #f9f6d6 25px, rgba(0, 0, 0, 0) 15%), url(../img/join_background_workplace.png) no-repeat center bottom, url(../img/join_background_black.png) no-repeat center bottom;
@@ -953,7 +957,8 @@ form button {
     position: absolute;
     bottom: 0;
     right: 11%;
-    z-index: 10; }
+    z-index: 10;
+    max-height: 100%; }
 
 .free_month_form {
   position: absolute;
@@ -1099,7 +1104,7 @@ form button {
 
 .park {
   height: 142px;
-  top: 268px;
+  top: 32%;
   left: 5%; }
   .park:after {
     height: 125px; }
@@ -1110,7 +1115,7 @@ form button {
 
 .market {
   height: 68px;
-  top: 286px;
+  top: 38%;
   left: 33%; }
   .market:after {
     height: 45px; }
@@ -1121,14 +1126,14 @@ form button {
 
 .MC {
   height: 118px;
-  top: 276px;
+  top: 32%;
   left: 55%; }
   .MC:after {
     height: 95px; }
   .MC h3:after {
-    top: 123px; }
+    top: 113px; }
   .MC h3:before {
-    top: 98px; }
+    top: 88px; }
 
 .coffee_life {
   height: 199px;
@@ -1144,14 +1149,14 @@ form button {
 #open_1969 {
   cursor: pointer;
   height: 227px;
-  top: 255px;
+  top: 38%;
   right: 10%; }
   #open_1969:after {
     height: 205px; }
   #open_1969 h3:after {
-    top: 233px; }
+    top: 223px; }
   #open_1969 h3:before {
-    top: 208px; }
+    top: 198px; }
 
 #map_block.active {
   display: block; }

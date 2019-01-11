@@ -86,6 +86,7 @@ button
 header
 	background-color: $headerBackground;
 	height: 100vh;
+	min-height: 730px; 
 	overflow: hidden;
 
 header p, a, h1, h2
@@ -93,7 +94,7 @@ header p, a, h1, h2
 
 .top_line
 	padding: 20px 0;
-	max-height: 90px;
+	min-height: 90px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -257,6 +258,7 @@ form
 
 #advantage
 	height: 100%;
+	min-height: 840px;
 	background: linear-gradient(to right, rgba($mainBackground, 1)10px, rgba(0,0,0, 0)10%), url("../img/advantage.png") top left no-repeat;
 	padding-top: 25px;
 	margin-bottom: 25px;
@@ -537,7 +539,7 @@ form
 	height: 100%;
 	width: 50%;
 	p:first-child
-		width: 180px;
+		width: 80%;
 		height: 100px;
 		margin: 40px auto 0;
 		font-size: em(68);
@@ -554,7 +556,7 @@ form
 		font-size: em(24);
 		color: $mainBackground;
 		text-transform: lowercase;
-		width: 180px;
+		width: 80%;
 		&:before, &:after
 			content: "";
 			position: absolute;
@@ -731,6 +733,7 @@ form
 
 #details
 	height: 100vh;
+	min-height: 880px;
 	background: linear-gradient(to top, rgba($mainBackground, 1)15px, rgba(0,0,0, 0)20%), url(../img/details_chair.png) no-repeat center top, url(../img/details_background.png) no-repeat center top;
 	position: relative;
 	padding-top: 40px;
@@ -817,6 +820,7 @@ form
 
 #gift
 	height: 100vh;
+	min-height: 740px;
 	background: linear-gradient(to right, rgba($mainBackground, 1)25px, rgba(0,0,0, 0)15%), linear-gradient(to left, rgba($mainBackground, 1)25px, rgba(0,0,0, 0)15%), url(../img/join_background_workplace.png) no-repeat center bottom, url(../img/join_background_black.png) no-repeat center bottom;
 	position: relative;
 	img
@@ -824,6 +828,7 @@ form
 		bottom: 0;
 		right: 11%;
 		z-index: 10;
+		max-height: 100%;
 
 .free_month_form
 	position: absolute;
@@ -956,7 +961,7 @@ form
 	
 .park	
 	height: 142px;
-	top: 268px;
+	top: 32%;
 	left: 5%;
 	&:after
 		height: 125px;
@@ -967,7 +972,7 @@ form
 
 .market
 	height: 68px;
-	top: 286px;
+	top: 38%;
 	left: 33%;
 	&:after
 		height: 45px;
@@ -978,14 +983,14 @@ form
 
 .MC
 	height: 118px;
-	top: 276px;
+	top: 32%;
 	left: 55%;
 	&:after
 		height: 95px;
 	h3:after
-		top: 123px;
+		top: 113px;
 	h3:before
-		top: 98px;
+		top: 88px;
 
 .coffee_life
 	height: 199px;
@@ -1001,14 +1006,14 @@ form
 #open_1969
 	cursor: pointer;
 	height: 227px;
-	top: 255px;
+	top: 38%;
 	right: 10%;
 	&:after
 		height: 205px;
 	h3:after
-		top: 233px;
+		top: 223px;
 	h3:before
-		top: 208px;
+		top: 198px;
 
 #map_block.active
 	display: block;
